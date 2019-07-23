@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.minimize_btn = new System.Windows.Forms.Button();
             this.exit_btn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +46,16 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1155, 793);
             this.mainPanel.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(477, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(163, 45);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Баланс";
             // 
             // minimize_btn
             // 
@@ -79,16 +89,6 @@
             this.exit_btn.Text = "X";
             this.exit_btn.UseVisualStyleBackColor = false;
             this.exit_btn.Click += new System.EventHandler(this.Exit_btn_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(425, 186);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(254, 65);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "balance";
             // 
             // BalanceUC
             // 

@@ -34,6 +34,7 @@ namespace BudgetTrekker
             HomeUC.Dock = DockStyle.Fill;
             this.mainPanel.Controls.Add(HomeUC);
 
+            ChangeButtonColor(ref homeBtn);
             this.mainPanel.Controls["HomeUC"].BringToFront();
             dragControl1.SelectControl = HomeUC.mainPanel;
 
@@ -66,8 +67,8 @@ namespace BudgetTrekker
             ReportsUC = new ReportsUC();
             ReportsUC.Dock = DockStyle.Fill;
             this.mainPanel.Controls.Add(ReportsUC);
-            
-                        
+
+
             CalendarUC = new CalendarUC();
             CalendarUC.Dock = DockStyle.Fill;
             this.mainPanel.Controls.Add(CalendarUC);
@@ -87,60 +88,103 @@ namespace BudgetTrekker
         {
             this.mainPanel.Controls["HomeUC"].BringToFront();
             dragControl1.SelectControl = HomeUC.mainPanel;
+
+            ChangeButtonColor(ref homeBtn);
         }
 
         private void Balance_btn_Click(object sender, EventArgs e)
         {
             this.mainPanel.Controls["BalanceUC"].BringToFront();
             dragControl1.SelectControl = BalanceUC.mainPanel;
+
+            ChangeButtonColor(ref balance_btn);
         }
 
         private void Income_btn_Click(object sender, EventArgs e)
         {
             this.mainPanel.Controls["IncomeUC"].BringToFront();
             dragControl1.SelectControl = IncomeUC.mainPanel;
+
+            ChangeButtonColor(ref income_btn);
         }
 
         private void Spending_btn_Click(object sender, EventArgs e)
         {
             this.mainPanel.Controls["SpendingUC"].BringToFront();
             dragControl1.SelectControl = SpendingUC.mainPanel;
+
+            ChangeButtonColor(ref spending_btn);
         }
 
         private void Accounts_btn_Click(object sender, EventArgs e)
         {
             this.mainPanel.Controls["AccountsUS"].BringToFront();
             dragControl1.SelectControl = AccountsUS.mainPanel;
+
+            ChangeButtonColor(ref accounts_btn);
         }
 
         private void Budgets_btn_Click(object sender, EventArgs e)
         {
             this.mainPanel.Controls["BudgetsUC"].BringToFront();
             dragControl1.SelectControl = BudgetsUC.mainPanel;
+
+            ChangeButtonColor(ref budgets_btn);
         }
 
         private void Reports_btn_Click(object sender, EventArgs e)
         {
             this.mainPanel.Controls["ReportsUC"].BringToFront();
             dragControl1.SelectControl = ReportsUC.mainPanel;
+
+            ChangeButtonColor(ref reports_btn);
         }
 
         private void Calendar_btn_Click(object sender, EventArgs e)
         {
             this.mainPanel.Controls["CalendarUC"].BringToFront();
             dragControl1.SelectControl = CalendarUC.mainPanel;
+
+            ChangeButtonColor(ref calendar_btn);
         }
 
         private void Preferences_btn_Click(object sender, EventArgs e)
         {
             this.mainPanel.Controls["PreferencesUC"].BringToFront();
             dragControl1.SelectControl = PreferencesUC.mainPanel;
+
+            ChangeButtonColor(ref preferences_btn);
         }
 
         private void Settings_btn_Click(object sender, EventArgs e)
         {
             this.mainPanel.Controls["SettingsUC"].BringToFront();
             dragControl1.SelectControl = SettingsUC.mainPanel;
+
+            ChangeButtonColor(ref settings_btn);
+        }
+
+
+        /////////////////////////////////////////
+        // another Methods
+        /////////////////////////////////////////
+        
+
+        private void ChangeButtonColor(ref Button currentButton)
+        {
+            Button[] buttons = new[] {this.homeBtn, this.balance_btn, this.income_btn, this.spending_btn, this.accounts_btn,
+                                      this.budgets_btn, this.reports_btn, this.calendar_btn, this.preferences_btn, this.settings_btn};
+
+
+            for (int i = 0; i < buttons.Length; i++)
+            {
+                if (currentButton != buttons[i])
+                {
+                    buttons[i].BackColor = Color.Gray;
+                }
+            }
+
+            currentButton.BackColor = Color.FromArgb(64, 64, 64);
         }
     }
 }
