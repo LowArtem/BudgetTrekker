@@ -28,16 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.infoPanel = new System.Windows.Forms.Panel();
+            this.deleteBtn = new System.Windows.Forms.Button();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.dateLb = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.minimize_btn = new System.Windows.Forms.Button();
             this.exit_btn = new System.Windows.Forms.Button();
+            this.deleteBtn_ToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.mainPanel.SuspendLayout();
+            this.infoPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mainPanel.Controls.Add(this.monthCalendar1);
+            this.mainPanel.Controls.Add(this.infoPanel);
             this.mainPanel.Controls.Add(this.label1);
             this.mainPanel.Controls.Add(this.minimize_btn);
             this.mainPanel.Controls.Add(this.exit_btn);
@@ -46,6 +56,73 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1155, 793);
             this.mainPanel.TabIndex = 4;
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.monthCalendar1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(1, 5);
+            this.monthCalendar1.FirstDayOfWeek = System.Windows.Forms.Day.Monday;
+            this.monthCalendar1.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.monthCalendar1.Location = new System.Drawing.Point(955, 66);
+            this.monthCalendar1.MaxSelectionCount = 1;
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 0;
+            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.MonthCalendar1_DateSelected);
+            // 
+            // infoPanel
+            // 
+            this.infoPanel.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.infoPanel.Controls.Add(this.deleteBtn);
+            this.infoPanel.Controls.Add(this.checkedListBox1);
+            this.infoPanel.Controls.Add(this.dateLb);
+            this.infoPanel.Location = new System.Drawing.Point(16, 66);
+            this.infoPanel.Name = "infoPanel";
+            this.infoPanel.Size = new System.Drawing.Size(927, 700);
+            this.infoPanel.TabIndex = 4;
+            // 
+            // deleteBtn
+            // 
+            this.deleteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.deleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.deleteBtn.BackgroundImage = global::BudgetTrekker.Properties.Resources.trash;
+            this.deleteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteBtn.Location = new System.Drawing.Point(833, 22);
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.Size = new System.Drawing.Size(55, 42);
+            this.deleteBtn.TabIndex = 3;
+            this.deleteBtn.UseVisualStyleBackColor = false;
+            this.deleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checkedListBox1.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "Отдать долг 200 руб Васе",
+            "Стрясти 1000 руб с Пети"});
+            this.checkedListBox1.Location = new System.Drawing.Point(28, 65);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(860, 595);
+            this.checkedListBox1.TabIndex = 2;
+            // 
+            // dateLb
+            // 
+            this.dateLb.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dateLb.AutoSize = true;
+            this.dateLb.BackColor = System.Drawing.Color.White;
+            this.dateLb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dateLb.Font = new System.Drawing.Font("Century Gothic", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateLb.ForeColor = System.Drawing.Color.Red;
+            this.dateLb.Location = new System.Drawing.Point(266, 2);
+            this.dateLb.Name = "dateLb";
+            this.dateLb.Size = new System.Drawing.Size(411, 37);
+            this.dateLb.TabIndex = 0;
+            this.dateLb.Text = "00.00.0000 — Понедельник";
             // 
             // label1
             // 
@@ -90,6 +167,10 @@
             this.exit_btn.UseVisualStyleBackColor = false;
             this.exit_btn.Click += new System.EventHandler(this.Exit_btn_Click);
             // 
+            // deleteBtn_ToolTip
+            // 
+            this.deleteBtn_ToolTip.ToolTipTitle = "Внимание";
+            // 
             // CalendarUC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -99,6 +180,8 @@
             this.Size = new System.Drawing.Size(1155, 793);
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
+            this.infoPanel.ResumeLayout(false);
+            this.infoPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -109,5 +192,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button minimize_btn;
         private System.Windows.Forms.Button exit_btn;
+        private System.Windows.Forms.Panel infoPanel;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.Label dateLb;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.Button deleteBtn;
+        private System.Windows.Forms.ToolTip deleteBtn_ToolTip;
     }
 }

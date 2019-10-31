@@ -29,15 +29,19 @@
         private void InitializeComponent()
         {
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.infoPanel = new System.Windows.Forms.Panel();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.minimize_btn = new System.Windows.Forms.Button();
             this.exit_btn = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
+            this.infoPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mainPanel.Controls.Add(this.infoPanel);
             this.mainPanel.Controls.Add(this.label1);
             this.mainPanel.Controls.Add(this.minimize_btn);
             this.mainPanel.Controls.Add(this.exit_btn);
@@ -46,6 +50,31 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1155, 793);
             this.mainPanel.TabIndex = 4;
+            // 
+            // infoPanel
+            // 
+            this.infoPanel.BackColor = System.Drawing.Color.Gainsboro;
+            this.infoPanel.Controls.Add(this.listBox1);
+            this.infoPanel.Location = new System.Drawing.Point(16, 66);
+            this.infoPanel.Name = "infoPanel";
+            this.infoPanel.Size = new System.Drawing.Size(1117, 700);
+            this.infoPanel.TabIndex = 4;
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.Gainsboro;
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBox1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.HorizontalScrollbar = true;
+            this.listBox1.ItemHeight = 24;
+            this.listBox1.Items.AddRange(new object[] {
+            "[20.05.2012]: -350 руб со счета \"Qiwi\" в категорию \"Продукты питания\""});
+            this.listBox1.Location = new System.Drawing.Point(0, 0);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(1117, 700);
+            this.listBox1.TabIndex = 0;
             // 
             // label1
             // 
@@ -99,6 +128,7 @@
             this.Size = new System.Drawing.Size(1155, 793);
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
+            this.infoPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -109,5 +139,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button minimize_btn;
         private System.Windows.Forms.Button exit_btn;
+        private System.Windows.Forms.Panel infoPanel;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

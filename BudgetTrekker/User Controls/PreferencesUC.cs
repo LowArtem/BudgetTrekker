@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+// TODO: написать здесь нечто похожее на бюджеты, но не обязтельное, а то, на что хватит денег после расчета
 namespace BudgetTrekker.User_Controls
 {
     public partial class PreferencesUC : UserControl

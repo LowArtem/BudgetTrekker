@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.addBtn = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.minimize_btn = new System.Windows.Forms.Button();
             this.exit_btn = new System.Windows.Forms.Button();
@@ -38,6 +40,8 @@
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mainPanel.Controls.Add(this.addBtn);
+            this.mainPanel.Controls.Add(this.tableLayoutPanel1);
             this.mainPanel.Controls.Add(this.label1);
             this.mainPanel.Controls.Add(this.minimize_btn);
             this.mainPanel.Controls.Add(this.exit_btn);
@@ -46,6 +50,37 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1155, 793);
             this.mainPanel.TabIndex = 4;
+            // 
+            // addBtn
+            // 
+            this.addBtn.BackColor = System.Drawing.Color.LightGreen;
+            this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addBtn.Font = new System.Drawing.Font("Century Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addBtn.Location = new System.Drawing.Point(1060, 66);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(52, 46);
+            this.addBtn.TabIndex = 5;
+            this.addBtn.Text = "+";
+            this.addBtn.UseVisualStyleBackColor = false;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.AutoScroll = true;
+            this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tableLayoutPanel1.ColumnCount = 5;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.AddColumns;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(29, 114);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1083, 632);
+            this.tableLayoutPanel1.TabIndex = 4;
             // 
             // label1
             // 
@@ -109,5 +144,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button minimize_btn;
         private System.Windows.Forms.Button exit_btn;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button addBtn;
     }
 }
