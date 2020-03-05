@@ -7,13 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BudgetTrekker.Models;
+using System.Text.RegularExpressions;
 
 namespace BudgetTrekker.User_Controls
 {
     public  partial class AccountsUS : UserControl
     {
-
-        private Panel panel_test;
+        private List<ReportData> reportDatas;
+        private List<AccountData> accountDatas;
+        private List<IncomeData> incomeDatas;
+        private List<SpendingData> spendingDatas;
 
         public AccountsUS()
         {
@@ -22,6 +26,8 @@ namespace BudgetTrekker.User_Controls
             GlobalFunctions.SetColorChildPanels(Color.FromArgb(255, 224, 204), ref mainPanel);
                        
             tableLayoutPanel1.AutoScroll = true;
+
+            DBInit();
 
             TableElementsInit();
         }
@@ -34,63 +40,29 @@ namespace BudgetTrekker.User_Controls
         private void Minimize_btn_Click(object sender, EventArgs e)
         {
             this.ParentForm.WindowState = FormWindowState.Minimized;
-        }
-
-        private void SettingsButton_Click(object sender, EventArgs e)
-        {
-            // Открывает панель настроек
-            if (((Button)sender).Text != "x")
-            {
-                foreach (var i in tableLayoutPanel1.Controls)
-                {
-                    if (i.GetType() == typeof(Panel))
-                    {
-                        // TODO: Добавить на панель все нужные для настроек элементы
-                        Label label = new Label();
-                        label.AutoSize = true;
-                        label.Text = "Settings: ";
-                        label.ForeColor = Color.Black;
-                        label.Font = new Font("Century Gothic", 18, FontStyle.Regular);
-                        label.Location = new Point(25, 200);
-
-
-                        Button testBtn = GetChildButton(((Panel)i));
-
-                        if ((Button)sender == testBtn)
-                        {
-                            ((Panel)i).Controls.Add(label);
-                            ((Button)sender).Text = "x";
-                        }
-                    }
-                }
-            }
-            // Закрывает панель настроек
-            else
-            {
-                foreach (var i in tableLayoutPanel1.Controls)
-                {
-                    if (i.GetType() == typeof(Panel))
-                    {
-                        // TODO: Добавить на панель все обычные элементы, это нажатие закрывает настройки
-                        
-                        Button testBtn = GetChildButton(((Panel)i));
-
-                        if ((Button)sender == testBtn)
-                        {
-                            ((Panel)i).Controls.Remove(GetChildLabelWithText(((Panel)i)));
-                            ((Button)sender).Text = "⋮";
-                        }
-                    }
-                }
-            }
-        }
+        }        
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-            // TODO: исправить нарушение нумерации
-            int number = tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
-            tableLayoutPanel1.ColumnCount++;
-            TableElementsAdd(tableLayoutPanel1.ColumnCount);
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
+
+            int index = 0;
+            using (DbManager db = new DbManager())
+            {
+                var test = db.Accounts.OrderByDescending(i => i.Index).ToList();
+                if (test.Count > 0)
+                    index = test[0].Index;
+                test.Clear();
+            }
+
+            AccountData account = new AccountData("Название", index + 1, "0", 0);
+            using (DbManager db = new DbManager())
+            {
+                db.Accounts.Add(account);
+                db.SaveChanges();
+            }
+
+            TableElementsAdd(account);
         }
 
 
@@ -103,79 +75,44 @@ namespace BudgetTrekker.User_Controls
         
         private void TableElementsInit()
         {
-            for (int i = 0; i < tableLayoutPanel1.ColumnCount; i++)
+            for (int i = 0; i < accountDatas.Count; i++)
             {
-                TableElementsAdd(i);
-            }
-        }
-
-        private void TableElementsAdd(int number)
-        {
-            Panel panel = new Panel();
-            panel.BackColor = Color.FromArgb(255, 224, 204);
-            panel.Size = new Size(300, 632);
-
-            Label label = new Label();
-            label.AutoSize = true;
-
-            // TODO: добавить название счета
-            label.Text = (number + 1).ToString() + ". Название счета";
-
-            label.ForeColor = Color.Black;
-            label.Font = new Font("Century Gothic", 18, FontStyle.Regular);
-            label.Location = new Point(25, 5);
-
-            panel.Controls.Add(label);
-
-            Button button = new Button();
-            //button.Size = new Size(50, 50);
-            button.FlatStyle = FlatStyle.Flat;
-            button.AutoSize = true;
-            button.Location = new Point(100, 550);
-
-            //button.BackColor = Color.FromArgb(235, 194, 175);
-            button.BackColor = Color.FromArgb(218, 189, 171);
-
-            button.Font = new Font("Century Gothic", 23);
-            button.Text = "⋮";
-            button.Click += new EventHandler(SettingsButton_Click);
-
-            panel.Controls.Add(button);
-
-            panel_test = panel;
-
-            tableLayoutPanel1.Controls.Add(panel, number, 0);
-        }
-   
-        
-        private Button GetChildButton(Panel parentPanel)
-        {
-            var controlsArray = (GlobalFunctions.GetAllChildControls(parentPanel, typeof(Button))).ToArray();
-
-            foreach (var i in controlsArray)
-            {
-                if (((Button)i).Text == "x" || ((Button)i).Text == "⋮")
-                {
-                    return (Button)i;
-                }
+                TableElementsAdd(accountDatas[i]);
             }
 
-            return null;
-        }
-
-        private Control GetChildLabelWithText(Panel parentPanel)
-        {
-            var controlsArray = (GlobalFunctions.GetAllChildControls(parentPanel, typeof(Label))).ToArray();
-
-            foreach (var i in controlsArray)
+            if (accountDatas.Count == 0)
             {
-                if (((Label)i).Text == "Settings: ")
-                {
-                    return i;
-                }                
+                tableLayoutPanel1.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
+            }
+            else
+            {
+                tableLayoutPanel1.CellBorderStyle = TableLayoutPanelCellBorderStyle.None; 
             }
 
-            return null;
+        }
+
+        private void TableElementsAdd(AccountData account)
+        {
+            AccountPanel accountPanel = new AccountPanel(account);
+
+            tableLayoutPanel1.Controls.Add(accountPanel, account.Index - 1, 0);
+        }      
+
+        public void DBInit()
+        {
+            using (DbManager db = new DbManager())
+            {
+                this.accountDatas = db.Accounts.ToList();
+                this.reportDatas = db.Reports.OrderByDescending(t => t.Time).ToList();
+                this.incomeDatas = db.Income.ToList();
+                this.spendingDatas = db.Spendings.ToList();
+            }
+
+            var accountPanels = GlobalFunctions.GetAllChildControls(tableLayoutPanel1, typeof(AccountPanel));
+            foreach (var panel in accountPanels)
+            {
+                ((AccountPanel)panel).DBInit();
+            }
         }
     }
 }

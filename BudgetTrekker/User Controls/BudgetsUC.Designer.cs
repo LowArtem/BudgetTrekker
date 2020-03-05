@@ -137,6 +137,7 @@
             this.button6.Size = new System.Drawing.Size(57, 49);
             this.button6.TabIndex = 8;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.Button6_Click);
             // 
             // label22
             // 
@@ -209,6 +210,7 @@
             this.button5.Size = new System.Drawing.Size(57, 49);
             this.button5.TabIndex = 8;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
             // label18
             // 
@@ -281,6 +283,7 @@
             this.button4.Size = new System.Drawing.Size(57, 49);
             this.button4.TabIndex = 8;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // label17
             // 
@@ -353,6 +356,7 @@
             this.button3.Size = new System.Drawing.Size(57, 49);
             this.button3.TabIndex = 7;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // label16
             // 
@@ -425,6 +429,7 @@
             this.button1.Size = new System.Drawing.Size(57, 49);
             this.button1.TabIndex = 6;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // label15
             // 

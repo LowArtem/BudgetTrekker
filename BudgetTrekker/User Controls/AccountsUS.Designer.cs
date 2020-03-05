@@ -41,8 +41,8 @@
             // 
             this.mainPanel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.mainPanel.Controls.Add(this.addBtn);
-            this.mainPanel.Controls.Add(this.tableLayoutPanel1);
             this.mainPanel.Controls.Add(this.label1);
+            this.mainPanel.Controls.Add(this.tableLayoutPanel1);
             this.mainPanel.Controls.Add(this.minimize_btn);
             this.mainPanel.Controls.Add(this.exit_btn);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;

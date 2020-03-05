@@ -20,5 +20,7 @@ namespace BudgetTrekker.Models
         public DbSet<SpendingData> Spendings { get; set; }
         public DbSet<ReportData> Reports { get; set; }
         public DbSet<CalendarData> Calendars { get; set; }
+
+        public DbSet<TaskData> Tasks { get; set; }
     }
 }

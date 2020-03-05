@@ -8,6 +8,8 @@ namespace BudgetTrekker.Models
         public int ID { get; set; } = 1;
         public string TaskText { get; set; }
         public bool IsComplete { get; set; } = false;
+        public int? CalendarDataID { get; set; }
+        public virtual CalendarData CalendarData { get; set; }
 
 
 
@@ -19,11 +21,11 @@ namespace BudgetTrekker.Models
         public TaskData() { }
 
 
-        internal List<TaskData> ToList()
-        {
-            var list = new List<TaskData>();
-            list.Add(this);
-            return list;
-        }
+        //internal List<TaskData> ToList()
+        //{
+        //    var list = new List<TaskData>();
+        //    list.Add(this);
+        //    return list;
+        //}
     }
 }

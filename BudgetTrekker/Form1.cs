@@ -13,6 +13,8 @@ namespace BudgetTrekker
 {
     public partial class Form1 : Form
     {
+        public static bool IsAccountChanged = false;
+
 
         HomeUC HomeUC;
         BalanceUC BalanceUC;
@@ -35,7 +37,7 @@ namespace BudgetTrekker
             this.mainPanel.Controls.Add(HomeUC);
 
             ChangeButtonColor(ref homeBtn);
-            this.mainPanel.Controls["HomeUC"].BringToFront();
+            this.HomeUC.BringToFront();
             dragControl1.SelectControl = HomeUC.mainPanel;
 
 
@@ -86,7 +88,7 @@ namespace BudgetTrekker
 
         private void HomeBtn_Click(object sender, EventArgs e)
         {
-            this.mainPanel.Controls["HomeUC"].BringToFront();
+            this.HomeUC.BringToFront();
             dragControl1.SelectControl = HomeUC.mainPanel;
 
             ChangeButtonColor(ref homeBtn);
@@ -94,7 +96,7 @@ namespace BudgetTrekker
 
         private void Balance_btn_Click(object sender, EventArgs e)
         {
-            this.mainPanel.Controls["BalanceUC"].BringToFront();
+            this.BalanceUC.BringToFront();
             dragControl1.SelectControl = BalanceUC.mainPanel;
 
             ChangeButtonColor(ref balance_btn);
@@ -102,7 +104,7 @@ namespace BudgetTrekker
 
         private void Income_btn_Click(object sender, EventArgs e)
         {
-            this.mainPanel.Controls["IncomeUC"].BringToFront();
+            this.IncomeUC.BringToFront();
             dragControl1.SelectControl = IncomeUC.mainPanel;
 
             ChangeButtonColor(ref income_btn);
@@ -110,7 +112,7 @@ namespace BudgetTrekker
 
         private void Spending_btn_Click(object sender, EventArgs e)
         {
-            this.mainPanel.Controls["SpendingUC"].BringToFront();
+            this.SpendingUC.BringToFront();
             dragControl1.SelectControl = SpendingUC.mainPanel;
 
             ChangeButtonColor(ref spending_btn);
@@ -118,15 +120,33 @@ namespace BudgetTrekker
 
         private void Accounts_btn_Click(object sender, EventArgs e)
         {
-            this.mainPanel.Controls["AccountsUS"].BringToFront();
-            dragControl1.SelectControl = AccountsUS.mainPanel;
+            if (IsAccountChanged)
+            {
+                this.AccountsUS.Dispose();
+                AccountsUS = new AccountsUS();
+                AccountsUS.Dock = DockStyle.Fill;
+                this.mainPanel.Controls.Add(AccountsUS);
 
-            ChangeButtonColor(ref accounts_btn);
+                this.AccountsUS.BringToFront();
+                dragControl1.SelectControl = AccountsUS.mainPanel;
+                ChangeButtonColor(ref accounts_btn);
+
+                IsAccountChanged = false;
+            }
+            else
+            {
+                this.AccountsUS.DBInit();
+                this.AccountsUS.BringToFront();
+                dragControl1.SelectControl = AccountsUS.mainPanel;
+
+                ChangeButtonColor(ref accounts_btn);
+            }
         }
 
         private void Budgets_btn_Click(object sender, EventArgs e)
         {
-            this.mainPanel.Controls["BudgetsUC"].BringToFront();
+            this.BudgetsUC.DBInit();
+            this.BudgetsUC.BringToFront();
             dragControl1.SelectControl = BudgetsUC.mainPanel;
 
             ChangeButtonColor(ref budgets_btn);
@@ -134,7 +154,8 @@ namespace BudgetTrekker
 
         private void Reports_btn_Click(object sender, EventArgs e)
         {
-            this.mainPanel.Controls["ReportsUC"].BringToFront();
+            this.ReportsUC.DBInit();
+            this.ReportsUC.BringToFront();            
             dragControl1.SelectControl = ReportsUC.mainPanel;
 
             ChangeButtonColor(ref reports_btn);
@@ -142,7 +163,7 @@ namespace BudgetTrekker
 
         private void Calendar_btn_Click(object sender, EventArgs e)
         {
-            this.mainPanel.Controls["CalendarUC"].BringToFront();
+            this.CalendarUC.BringToFront();
             dragControl1.SelectControl = CalendarUC.mainPanel;
 
             ChangeButtonColor(ref calendar_btn);
@@ -150,7 +171,8 @@ namespace BudgetTrekker
 
         private void Preferences_btn_Click(object sender, EventArgs e)
         {
-            this.mainPanel.Controls["PreferencesUC"].BringToFront();
+            this.PreferencesUC.DBInit();
+            this.PreferencesUC.BringToFront();
             dragControl1.SelectControl = PreferencesUC.mainPanel;
 
             ChangeButtonColor(ref preferences_btn);
@@ -158,17 +180,20 @@ namespace BudgetTrekker
 
         private void Settings_btn_Click(object sender, EventArgs e)
         {
-            this.mainPanel.Controls["SettingsUC"].BringToFront();
+            this.SettingsUC.DBInit();
+            this.SettingsUC.BringToFront();
             dragControl1.SelectControl = SettingsUC.mainPanel;
 
             ChangeButtonColor(ref settings_btn);
         }
+        
 
 
         /////////////////////////////////////////
         // another Methods
         /////////////////////////////////////////
-        
+
+
 
         private void ChangeButtonColor(ref Button currentButton)
         {

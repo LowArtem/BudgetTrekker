@@ -70,7 +70,7 @@
             this.listBox1.HorizontalScrollbar = true;
             this.listBox1.ItemHeight = 24;
             this.listBox1.Items.AddRange(new object[] {
-            "[20.05.2012]: -350 руб со счета \"Qiwi\" в категорию \"Продукты питания\""});
+            "[20.05.2012 09:36]: -350 руб со счета \"Qiwi\" в категорию \"Продукты питания\""});
             this.listBox1.Location = new System.Drawing.Point(0, 0);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(1117, 700);

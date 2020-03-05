@@ -39,6 +39,8 @@
             this.minimize_btn = new System.Windows.Forms.Button();
             this.exit_btn = new System.Windows.Forms.Button();
             this.deleteBtn_ToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.addBtn = new System.Windows.Forms.Button();
+            this.addBtn_ToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.mainPanel.SuspendLayout();
             this.infoPanel.SuspendLayout();
             this.SuspendLayout();
@@ -75,6 +77,7 @@
             // infoPanel
             // 
             this.infoPanel.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.infoPanel.Controls.Add(this.addBtn);
             this.infoPanel.Controls.Add(this.deleteBtn);
             this.infoPanel.Controls.Add(this.checkedListBox1);
             this.infoPanel.Controls.Add(this.dateLb);
@@ -102,6 +105,7 @@
             this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.checkedListBox1.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.HorizontalScrollbar = true;
             this.checkedListBox1.Items.AddRange(new object[] {
             "Отдать долг 200 руб Васе",
             "Стрясти 1000 руб с Пети"});
@@ -109,6 +113,8 @@
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(860, 595);
             this.checkedListBox1.TabIndex = 2;
+            this.checkedListBox1.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.CheckedListBox1_ItemCheck);
+            this.checkedListBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CheckedListBox1_MouseDown);
             // 
             // dateLb
             // 
@@ -169,7 +175,26 @@
             // 
             // deleteBtn_ToolTip
             // 
-            this.deleteBtn_ToolTip.ToolTipTitle = "Внимание";
+            this.deleteBtn_ToolTip.ToolTipTitle = "Удалить все выполненные события";
+            // 
+            // addBtn
+            // 
+            this.addBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.addBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.addBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addBtn.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addBtn.Location = new System.Drawing.Point(772, 22);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(55, 42);
+            this.addBtn.TabIndex = 4;
+            this.addBtn.Text = "+";
+            this.addBtn.UseVisualStyleBackColor = false;
+            this.addBtn.Click += new System.EventHandler(this.AddBtn_Click);
+            // 
+            // addBtn_ToolTip
+            // 
+            this.addBtn_ToolTip.ToolTipTitle = "Добавить новое событие";
             // 
             // CalendarUC
             // 
@@ -198,5 +223,7 @@
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.ToolTip deleteBtn_ToolTip;
+        private System.Windows.Forms.Button addBtn;
+        private System.Windows.Forms.ToolTip addBtn_ToolTip;
     }
 }

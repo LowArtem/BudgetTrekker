@@ -12,9 +12,8 @@ namespace BudgetTrekker.Models
             }
             set
             {
-                if (value == IncomeCategories.Father || value == IncomeCategories.Mother || value == IncomeCategories.SideJob ||
-                    value == IncomeCategories.Business || value == IncomeCategories.Other)
-                {
+                if (IncomeCategories.isRightCategory(value))
+                { 
                     this.Category_hide = value;
                 }
                 else
@@ -23,16 +22,16 @@ namespace BudgetTrekker.Models
                 }
             }
         }
-
-        public string Category_hide { get; set; }
+        
+        private string Category_hide { get; set; }
         public int ID { get; set; } = 1;
-        public int CurrentSum { get; set; } = 0;
+        public double CurrentSum { get; set; } = 0;
         public virtual AccountData Account { get; set; }
         public DateTime Time { get; set; }
 
 
 
-        public IncomeData(string category, int current_sum, AccountData account, DateTime time)
+        public IncomeData(string category, double current_sum, AccountData account, DateTime time)
         {
             this.Category_hide = category;
             this.CurrentSum = current_sum;

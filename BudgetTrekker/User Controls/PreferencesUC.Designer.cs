@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.minimize_btn = new System.Windows.Forms.Button();
-            this.exit_btn = new System.Windows.Forms.Button();
             this.infoPanel = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
@@ -75,6 +72,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.minimize_btn = new System.Windows.Forms.Button();
+            this.exit_btn = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
             this.infoPanel.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -97,49 +97,6 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1155, 793);
             this.mainPanel.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(477, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(288, 45);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Предпочтения";
-            // 
-            // minimize_btn
-            // 
-            this.minimize_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.minimize_btn.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.minimize_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.minimize_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimize_btn.Font = new System.Drawing.Font("Century Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.minimize_btn.ForeColor = System.Drawing.Color.Black;
-            this.minimize_btn.Location = new System.Drawing.Point(1037, 0);
-            this.minimize_btn.Name = "minimize_btn";
-            this.minimize_btn.Size = new System.Drawing.Size(59, 50);
-            this.minimize_btn.TabIndex = 2;
-            this.minimize_btn.Text = "-";
-            this.minimize_btn.UseVisualStyleBackColor = false;
-            this.minimize_btn.Click += new System.EventHandler(this.Minimize_btn_Click);
-            // 
-            // exit_btn
-            // 
-            this.exit_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.exit_btn.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.exit_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.exit_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.exit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exit_btn.Font = new System.Drawing.Font("Century Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.exit_btn.ForeColor = System.Drawing.Color.Black;
-            this.exit_btn.Location = new System.Drawing.Point(1096, 0);
-            this.exit_btn.Name = "exit_btn";
-            this.exit_btn.Size = new System.Drawing.Size(59, 50);
-            this.exit_btn.TabIndex = 1;
-            this.exit_btn.Text = "X";
-            this.exit_btn.UseVisualStyleBackColor = false;
-            this.exit_btn.Click += new System.EventHandler(this.Exit_btn_Click);
             // 
             // infoPanel
             // 
@@ -180,6 +137,7 @@
             this.button6.Size = new System.Drawing.Size(57, 49);
             this.button6.TabIndex = 8;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.Button6_Click);
             // 
             // label22
             // 
@@ -252,6 +210,7 @@
             this.button5.Size = new System.Drawing.Size(57, 49);
             this.button5.TabIndex = 8;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
             // label18
             // 
@@ -324,6 +283,7 @@
             this.button4.Size = new System.Drawing.Size(57, 49);
             this.button4.TabIndex = 8;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // label17
             // 
@@ -396,6 +356,7 @@
             this.button3.Size = new System.Drawing.Size(57, 49);
             this.button3.TabIndex = 7;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // label16
             // 
@@ -468,6 +429,7 @@
             this.button1.Size = new System.Drawing.Size(57, 49);
             this.button1.TabIndex = 6;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // label15
             // 
@@ -540,6 +502,7 @@
             this.button2.Size = new System.Drawing.Size(57, 49);
             this.button2.TabIndex = 3;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // label14
             // 
@@ -587,6 +550,49 @@
             this.label2.Size = new System.Drawing.Size(143, 27);
             this.label2.TabIndex = 0;
             this.label2.Text = "Название 1";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(477, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(288, 45);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Предпочтения";
+            // 
+            // minimize_btn
+            // 
+            this.minimize_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.minimize_btn.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.minimize_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.minimize_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimize_btn.Font = new System.Drawing.Font("Century Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.minimize_btn.ForeColor = System.Drawing.Color.Black;
+            this.minimize_btn.Location = new System.Drawing.Point(1037, 0);
+            this.minimize_btn.Name = "minimize_btn";
+            this.minimize_btn.Size = new System.Drawing.Size(59, 50);
+            this.minimize_btn.TabIndex = 2;
+            this.minimize_btn.Text = "-";
+            this.minimize_btn.UseVisualStyleBackColor = false;
+            this.minimize_btn.Click += new System.EventHandler(this.Minimize_btn_Click);
+            // 
+            // exit_btn
+            // 
+            this.exit_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.exit_btn.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.exit_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.exit_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.exit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exit_btn.Font = new System.Drawing.Font("Century Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.exit_btn.ForeColor = System.Drawing.Color.Black;
+            this.exit_btn.Location = new System.Drawing.Point(1096, 0);
+            this.exit_btn.Name = "exit_btn";
+            this.exit_btn.Size = new System.Drawing.Size(59, 50);
+            this.exit_btn.TabIndex = 1;
+            this.exit_btn.Text = "X";
+            this.exit_btn.UseVisualStyleBackColor = false;
+            this.exit_btn.Click += new System.EventHandler(this.Exit_btn_Click);
             // 
             // PreferencesUC
             // 
