@@ -13,6 +13,9 @@ namespace BudgetTrekker.User_Controls
 {
     public partial class CalendarUC : UserControl
     {
+        private static bool isShowingAllTasks = false; // включен ли показ всех задач в календаре
+
+
         public CalendarUC()
         {
             InitializeComponent();
@@ -23,8 +26,9 @@ namespace BudgetTrekker.User_Controls
 
             deleteBtn_ToolTip.SetToolTip(this.deleteBtn, "Все выполненные события будут удалены без возможности восстановления");
             addBtn_ToolTip.SetToolTip(this.addBtn, "Так же это возможно по нажатия правой кнопки мыши в пустом месте");
+            showallBtn_ToolTip.SetToolTip(this.show_all_btn, "Показать/скрыть все задачи вне зависимости от даты");
 
-            TaskPrint();
+            DayTaskPrint();
         }
 
         private void Exit_btn_Click(object sender, EventArgs e)
@@ -46,28 +50,21 @@ namespace BudgetTrekker.User_Controls
                 {
                     using (DbManager db = new DbManager())
                     {
-                        var data = db.Calendars.ToList();
-                        foreach (var data_element in data)
+                        var all_tasks = db.Tasks.ToList();
+                        foreach (var task in all_tasks)
                         {
-                            List<TaskData> tasks;
-                            if (data_element.Time.ToShortDateString() == monthCalendar1.SelectionStart.Date.ToShortDateString())
+                            if (task.IsComplete)
                             {
-                                tasks = data_element.Tasks.ToList();
-                                foreach (var task_item in tasks)
-                                {
-                                    if (task_item.IsComplete)
-                                    {
-                                        data_element.Tasks.Remove(task_item);
-                                        db.Tasks.Remove(task_item);
-                                        break;
-                                    }
-                                }
+                                db.Tasks.Remove(task);
+                            }                                                    
+                        }
 
-                                if (data_element.Tasks.Count == 0)
-                                {
-                                    db.Calendars.Remove(data_element);
-                                    break;
-                                }
+                        var calendars = db.Calendars.ToList();
+                        foreach (var calendar in calendars)
+                        {
+                            if (calendar.Tasks == null || calendar.Tasks.Count == 0)
+                            {
+                                db.Calendars.Remove(calendar);
                             }
                         }
 
@@ -81,7 +78,10 @@ namespace BudgetTrekker.User_Controls
 
         private void MonthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
-            TaskPrint();
+            if (isShowingAllTasks)
+                AllTaskPrint();
+            else
+                DayTaskPrint();
         }
 
         // Добавление нового события в календарь 
@@ -187,13 +187,13 @@ namespace BudgetTrekker.User_Controls
         {
             using (DbManager db = new DbManager())
             {
-                var data = db.Calendars.ToList();
-                foreach (var data_element in data)
+                var calendars = db.Calendars.ToList();
+                foreach (var calendar in calendars)
                 {
                     List<TaskData> tasks;
-                    if (data_element.Time.ToShortDateString() == monthCalendar1.SelectionStart.Date.ToShortDateString())
+                    if (calendar.Time.ToShortDateString() == monthCalendar1.SelectionStart.Date.ToShortDateString())
                     {
-                        tasks = data_element.Tasks.ToList();
+                        tasks = calendar.Tasks.ToList();
                         foreach (var task_item in tasks)
                         {                            
                             if (task_item.TaskText == checkedListBox1.Items[e.Index].ToString())
@@ -202,7 +202,23 @@ namespace BudgetTrekker.User_Controls
                                     task_item.IsComplete = true;
                                 else
                                     task_item.IsComplete = false;
-                                break;
+
+                                if (!isShowingAllTasks)
+                                    break;
+                            }
+                        }
+                    }
+                    else if (isShowingAllTasks)
+                    {
+                        var all_tasks = db.Tasks.ToList();
+                        foreach (var task in all_tasks)
+                        {
+                            if (task.TaskText == checkedListBox1.Items[e.Index].ToString())
+                            {
+                                if (e.NewValue == CheckState.Checked)
+                                    task.IsComplete = true;
+                                else
+                                    task.IsComplete = false;
                             }
                         }
                     }
@@ -212,11 +228,32 @@ namespace BudgetTrekker.User_Controls
             }
         }
 
+        // Показать/скрыть все задачи, вне зависимости от даты
+        private void Show_all_btn_Click_1(object sender, EventArgs e)
+        {
+            // если включен просмотр всех задач, сменить режим просмотра на задачи по дням
+            if (isShowingAllTasks)
+            {
+                show_all_btn.BackgroundImage = Properties.Resources.visible; // иконка кнопки
+                isShowingAllTasks = false;
+
+                DayTaskPrint();
+            }
+            // иначе, если включен режим промотра по дням, сменить режим на просмотр всех задач
+            else
+            {
+                show_all_btn.BackgroundImage = Properties.Resources.invisible; // иконка кнопки
+                isShowingAllTasks = true;
+
+                AllTaskPrint();
+            }
+        }
 
 
-        /////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////////////////////
         // another Methods
-        /////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -253,7 +290,7 @@ namespace BudgetTrekker.User_Controls
         }
 
 
-        private void TaskPrint()
+        private void DayTaskPrint()
         {
             var selection_date = monthCalendar1.SelectionStart.Date;
             dateLb.Text = selection_date.ToString("dd.MM.yyyy") + " — " + GetDayOfWeek(monthCalendar1.SelectionStart.Date.DayOfWeek);
@@ -275,6 +312,20 @@ namespace BudgetTrekker.User_Controls
                             checkedListBox1.Items.Add(task_item.TaskText, task_item.IsComplete);
                         }
                     }
+                }
+            }
+        }
+
+        private void AllTaskPrint()
+        {
+            checkedListBox1.Items.Clear();
+
+            using (DbManager db = new DbManager())
+            {
+                var tasks = db.Tasks.ToList();
+                foreach (var task in tasks)
+                {
+                    checkedListBox1.Items.Add(task.TaskText, task.IsComplete);
                 }
             }
         }

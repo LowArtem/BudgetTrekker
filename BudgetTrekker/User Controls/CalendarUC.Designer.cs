@@ -32,6 +32,8 @@
             this.mainPanel = new System.Windows.Forms.Panel();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.infoPanel = new System.Windows.Forms.Panel();
+            this.show_all_btn = new System.Windows.Forms.Button();
+            this.addBtn = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.dateLb = new System.Windows.Forms.Label();
@@ -39,8 +41,8 @@
             this.minimize_btn = new System.Windows.Forms.Button();
             this.exit_btn = new System.Windows.Forms.Button();
             this.deleteBtn_ToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.addBtn = new System.Windows.Forms.Button();
             this.addBtn_ToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.showallBtn_ToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.mainPanel.SuspendLayout();
             this.infoPanel.SuspendLayout();
             this.SuspendLayout();
@@ -77,6 +79,7 @@
             // infoPanel
             // 
             this.infoPanel.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.infoPanel.Controls.Add(this.show_all_btn);
             this.infoPanel.Controls.Add(this.addBtn);
             this.infoPanel.Controls.Add(this.deleteBtn);
             this.infoPanel.Controls.Add(this.checkedListBox1);
@@ -85,6 +88,36 @@
             this.infoPanel.Name = "infoPanel";
             this.infoPanel.Size = new System.Drawing.Size(927, 700);
             this.infoPanel.TabIndex = 4;
+            // 
+            // show_all_btn
+            // 
+            this.show_all_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.show_all_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.show_all_btn.BackgroundImage = global::BudgetTrekker.Properties.Resources.visible1;
+            this.show_all_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.show_all_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.show_all_btn.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.show_all_btn.Location = new System.Drawing.Point(42, 22);
+            this.show_all_btn.Name = "show_all_btn";
+            this.show_all_btn.Size = new System.Drawing.Size(55, 42);
+            this.show_all_btn.TabIndex = 5;
+            this.show_all_btn.UseVisualStyleBackColor = false;
+            this.show_all_btn.Click += new System.EventHandler(this.Show_all_btn_Click_1);
+            // 
+            // addBtn
+            // 
+            this.addBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.addBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.addBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addBtn.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addBtn.Location = new System.Drawing.Point(772, 22);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(55, 42);
+            this.addBtn.TabIndex = 4;
+            this.addBtn.Text = "+";
+            this.addBtn.UseVisualStyleBackColor = false;
+            this.addBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // deleteBtn
             // 
@@ -177,21 +210,6 @@
             // 
             this.deleteBtn_ToolTip.ToolTipTitle = "Удалить все выполненные события";
             // 
-            // addBtn
-            // 
-            this.addBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.addBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.addBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addBtn.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addBtn.Location = new System.Drawing.Point(772, 22);
-            this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(55, 42);
-            this.addBtn.TabIndex = 4;
-            this.addBtn.Text = "+";
-            this.addBtn.UseVisualStyleBackColor = false;
-            this.addBtn.Click += new System.EventHandler(this.AddBtn_Click);
-            // 
             // addBtn_ToolTip
             // 
             this.addBtn_ToolTip.ToolTipTitle = "Добавить новое событие";
@@ -225,5 +243,7 @@
         private System.Windows.Forms.ToolTip deleteBtn_ToolTip;
         private System.Windows.Forms.Button addBtn;
         private System.Windows.Forms.ToolTip addBtn_ToolTip;
+        private System.Windows.Forms.Button show_all_btn;
+        private System.Windows.Forms.ToolTip showallBtn_ToolTip;
     }
 }

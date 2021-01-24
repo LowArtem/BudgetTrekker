@@ -30,14 +30,11 @@
         {
             this.mainPanel = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
+            this.yearTotalLB = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
+            this.monthTotalLB = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.infoPanel = new System.Windows.Forms.Panel();
             this.yestardayPanel = new System.Windows.Forms.Panel();
             this.linePanel = new System.Windows.Forms.Panel();
@@ -65,10 +62,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.minimize_btn = new System.Windows.Forms.Button();
             this.exit_btn = new System.Windows.Forms.Button();
+            this.weekPanel = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.WtotalLB = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.WminusLB = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.WplusLB = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.lineVertPanel = new System.Windows.Forms.Panel();
             this.mainPanel.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.infoPanel.SuspendLayout();
             this.yestardayPanel.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -78,14 +86,18 @@
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.weekPanel.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mainPanel.Controls.Add(this.yestardayPanel);
             this.mainPanel.Controls.Add(this.panel9);
             this.mainPanel.Controls.Add(this.panel8);
-            this.mainPanel.Controls.Add(this.panel7);
             this.mainPanel.Controls.Add(this.infoPanel);
             this.mainPanel.Controls.Add(this.label1);
             this.mainPanel.Controls.Add(this.minimize_btn);
@@ -99,23 +111,23 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.DimGray;
-            this.panel9.Controls.Add(this.label14);
+            this.panel9.Controls.Add(this.yearTotalLB);
             this.panel9.Controls.Add(this.label15);
-            this.panel9.Location = new System.Drawing.Point(605, 287);
+            this.panel9.Location = new System.Drawing.Point(605, 620);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(534, 58);
             this.panel9.TabIndex = 11;
             // 
-            // label14
+            // yearTotalLB
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.White;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(373, 17);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(24, 25);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "0";
+            this.yearTotalLB.AutoSize = true;
+            this.yearTotalLB.BackColor = System.Drawing.Color.White;
+            this.yearTotalLB.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.yearTotalLB.Location = new System.Drawing.Point(338, 17);
+            this.yearTotalLB.Name = "yearTotalLB";
+            this.yearTotalLB.Size = new System.Drawing.Size(24, 25);
+            this.yearTotalLB.TabIndex = 2;
+            this.yearTotalLB.Text = "0";
             // 
             // label15
             // 
@@ -131,23 +143,23 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.DimGray;
-            this.panel8.Controls.Add(this.label12);
+            this.panel8.Controls.Add(this.monthTotalLB);
             this.panel8.Controls.Add(this.label13);
-            this.panel8.Location = new System.Drawing.Point(605, 198);
+            this.panel8.Location = new System.Drawing.Point(605, 531);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(534, 58);
             this.panel8.TabIndex = 10;
             // 
-            // label12
+            // monthTotalLB
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.White;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(373, 17);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(24, 25);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "0";
+            this.monthTotalLB.AutoSize = true;
+            this.monthTotalLB.BackColor = System.Drawing.Color.White;
+            this.monthTotalLB.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.monthTotalLB.Location = new System.Drawing.Point(338, 17);
+            this.monthTotalLB.Name = "monthTotalLB";
+            this.monthTotalLB.Size = new System.Drawing.Size(24, 25);
+            this.monthTotalLB.TabIndex = 2;
+            this.monthTotalLB.Text = "0";
             // 
             // label13
             // 
@@ -160,43 +172,11 @@
             this.label13.TabIndex = 1;
             this.label13.Text = "Итого за месяц:";
             // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.DimGray;
-            this.panel7.Controls.Add(this.label10);
-            this.panel7.Controls.Add(this.label11);
-            this.panel7.Location = new System.Drawing.Point(605, 118);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(534, 58);
-            this.panel7.TabIndex = 9;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.White;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(373, 17);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(24, 25);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "0";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.White;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(3, 17);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(198, 25);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Итого за неделю:";
-            // 
             // infoPanel
             // 
             this.infoPanel.BackColor = System.Drawing.Color.LightGray;
-            this.infoPanel.Controls.Add(this.yestardayPanel);
             this.infoPanel.Controls.Add(this.todayPanel);
+            this.infoPanel.Controls.Add(this.weekPanel);
             this.infoPanel.Location = new System.Drawing.Point(16, 66);
             this.infoPanel.Name = "infoPanel";
             this.infoPanel.Size = new System.Drawing.Size(569, 700);
@@ -205,12 +185,12 @@
             // yestardayPanel
             // 
             this.yestardayPanel.BackColor = System.Drawing.Color.Gray;
-            this.yestardayPanel.Controls.Add(this.linePanel);
+            this.yestardayPanel.Controls.Add(this.lineVertPanel);
             this.yestardayPanel.Controls.Add(this.panel4);
             this.yestardayPanel.Controls.Add(this.panel5);
             this.yestardayPanel.Controls.Add(this.panel6);
             this.yestardayPanel.Controls.Add(this.label3);
-            this.yestardayPanel.Location = new System.Drawing.Point(0, 350);
+            this.yestardayPanel.Location = new System.Drawing.Point(586, 66);
             this.yestardayPanel.Name = "yestardayPanel";
             this.yestardayPanel.Size = new System.Drawing.Size(569, 350);
             this.yestardayPanel.TabIndex = 6;
@@ -238,7 +218,7 @@
             this.YDtotalLB.AutoSize = true;
             this.YDtotalLB.BackColor = System.Drawing.Color.White;
             this.YDtotalLB.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.YDtotalLB.Location = new System.Drawing.Point(373, 17);
+            this.YDtotalLB.Location = new System.Drawing.Point(304, 17);
             this.YDtotalLB.Name = "YDtotalLB";
             this.YDtotalLB.Size = new System.Drawing.Size(24, 25);
             this.YDtotalLB.TabIndex = 3;
@@ -270,7 +250,7 @@
             this.YDminusLB.AutoSize = true;
             this.YDminusLB.BackColor = System.Drawing.Color.Red;
             this.YDminusLB.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.YDminusLB.Location = new System.Drawing.Point(373, 17);
+            this.YDminusLB.Location = new System.Drawing.Point(304, 17);
             this.YDminusLB.Name = "YDminusLB";
             this.YDminusLB.Size = new System.Drawing.Size(31, 25);
             this.YDminusLB.TabIndex = 2;
@@ -302,7 +282,7 @@
             this.YDplusLB.AutoSize = true;
             this.YDplusLB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.YDplusLB.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.YDplusLB.Location = new System.Drawing.Point(373, 17);
+            this.YDplusLB.Location = new System.Drawing.Point(304, 17);
             this.YDplusLB.Name = "YDplusLB";
             this.YDplusLB.Size = new System.Drawing.Size(39, 25);
             this.YDplusLB.TabIndex = 2;
@@ -356,7 +336,7 @@
             this.TDtotalLB.AutoSize = true;
             this.TDtotalLB.BackColor = System.Drawing.Color.White;
             this.TDtotalLB.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TDtotalLB.Location = new System.Drawing.Point(373, 17);
+            this.TDtotalLB.Location = new System.Drawing.Point(304, 17);
             this.TDtotalLB.Name = "TDtotalLB";
             this.TDtotalLB.Size = new System.Drawing.Size(24, 25);
             this.TDtotalLB.TabIndex = 2;
@@ -388,7 +368,7 @@
             this.TDminusLB.AutoSize = true;
             this.TDminusLB.BackColor = System.Drawing.Color.Red;
             this.TDminusLB.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TDminusLB.Location = new System.Drawing.Point(373, 17);
+            this.TDminusLB.Location = new System.Drawing.Point(304, 17);
             this.TDminusLB.Name = "TDminusLB";
             this.TDminusLB.Size = new System.Drawing.Size(31, 25);
             this.TDminusLB.TabIndex = 1;
@@ -420,7 +400,7 @@
             this.TDplusLB.AutoSize = true;
             this.TDplusLB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.TDplusLB.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TDplusLB.Location = new System.Drawing.Point(373, 17);
+            this.TDplusLB.Location = new System.Drawing.Point(304, 17);
             this.TDplusLB.Name = "TDplusLB";
             this.TDplusLB.Size = new System.Drawing.Size(39, 25);
             this.TDplusLB.TabIndex = 1;
@@ -490,6 +470,133 @@
             this.exit_btn.UseVisualStyleBackColor = false;
             this.exit_btn.Click += new System.EventHandler(this.Exit_btn_Click);
             // 
+            // weekPanel
+            // 
+            this.weekPanel.BackColor = System.Drawing.Color.Gray;
+            this.weekPanel.Controls.Add(this.linePanel);
+            this.weekPanel.Controls.Add(this.panel12);
+            this.weekPanel.Controls.Add(this.panel13);
+            this.weekPanel.Controls.Add(this.panel14);
+            this.weekPanel.Controls.Add(this.label19);
+            this.weekPanel.Location = new System.Drawing.Point(0, 350);
+            this.weekPanel.Name = "weekPanel";
+            this.weekPanel.Size = new System.Drawing.Size(569, 350);
+            this.weekPanel.TabIndex = 12;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.DimGray;
+            this.panel12.Controls.Add(this.WtotalLB);
+            this.panel12.Controls.Add(this.label12);
+            this.panel12.Location = new System.Drawing.Point(17, 221);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(534, 58);
+            this.panel12.TabIndex = 11;
+            // 
+            // WtotalLB
+            // 
+            this.WtotalLB.AutoSize = true;
+            this.WtotalLB.BackColor = System.Drawing.Color.White;
+            this.WtotalLB.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.WtotalLB.Location = new System.Drawing.Point(304, 17);
+            this.WtotalLB.Name = "WtotalLB";
+            this.WtotalLB.Size = new System.Drawing.Size(24, 25);
+            this.WtotalLB.TabIndex = 3;
+            this.WtotalLB.Text = "0";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.White;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(3, 17);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(78, 25);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Итого:";
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.DimGray;
+            this.panel13.Controls.Add(this.WminusLB);
+            this.panel13.Controls.Add(this.label16);
+            this.panel13.Location = new System.Drawing.Point(17, 132);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(534, 58);
+            this.panel13.TabIndex = 10;
+            // 
+            // WminusLB
+            // 
+            this.WminusLB.AutoSize = true;
+            this.WminusLB.BackColor = System.Drawing.Color.Red;
+            this.WminusLB.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.WminusLB.Location = new System.Drawing.Point(304, 17);
+            this.WminusLB.Name = "WminusLB";
+            this.WminusLB.Size = new System.Drawing.Size(31, 25);
+            this.WminusLB.TabIndex = 2;
+            this.WminusLB.Text = "-0";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Red;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label16.Location = new System.Drawing.Point(3, 17);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(113, 25);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Расходы:";
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.DimGray;
+            this.panel14.Controls.Add(this.WplusLB);
+            this.panel14.Controls.Add(this.label18);
+            this.panel14.Location = new System.Drawing.Point(17, 52);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(534, 58);
+            this.panel14.TabIndex = 9;
+            // 
+            // WplusLB
+            // 
+            this.WplusLB.AutoSize = true;
+            this.WplusLB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.WplusLB.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.WplusLB.Location = new System.Drawing.Point(304, 17);
+            this.WplusLB.Name = "WplusLB";
+            this.WplusLB.Size = new System.Drawing.Size(39, 25);
+            this.WplusLB.TabIndex = 2;
+            this.WplusLB.Text = "+0";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label18.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label18.Location = new System.Drawing.Point(3, 17);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(158, 25);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Поступления:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label19.Location = new System.Drawing.Point(227, 3);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(123, 37);
+            this.label19.TabIndex = 7;
+            this.label19.Text = "Неделя";
+            // 
+            // lineVertPanel
+            // 
+            this.lineVertPanel.BackColor = System.Drawing.Color.Black;
+            this.lineVertPanel.Location = new System.Drawing.Point(0, -1);
+            this.lineVertPanel.Name = "lineVertPanel";
+            this.lineVertPanel.Size = new System.Drawing.Size(2, 350);
+            this.lineVertPanel.TabIndex = 12;
+            // 
             // BalanceUC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -503,8 +610,6 @@
             this.panel9.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.infoPanel.ResumeLayout(false);
             this.yestardayPanel.ResumeLayout(false);
             this.yestardayPanel.PerformLayout();
@@ -522,6 +627,14 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.weekPanel.ResumeLayout(false);
+            this.weekPanel.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -557,13 +670,22 @@
         private System.Windows.Forms.Label TDminusLB;
         private System.Windows.Forms.Label TDplusLB;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label yearTotalLB;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label monthTotalLB;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel weekPanel;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label WtotalLB;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Label WminusLB;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Label WplusLB;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Panel lineVertPanel;
     }
 }

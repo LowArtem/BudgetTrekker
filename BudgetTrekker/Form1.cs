@@ -32,15 +32,6 @@ namespace BudgetTrekker
         {
             InitializeComponent();
 
-            HomeUC = new HomeUC();
-            HomeUC.Dock = DockStyle.Fill;
-            this.mainPanel.Controls.Add(HomeUC);
-
-            ChangeButtonColor(ref homeBtn);
-            this.HomeUC.BringToFront();
-            dragControl1.SelectControl = HomeUC.mainPanel;
-
-
             BalanceUC = new BalanceUC();
             BalanceUC.Dock = DockStyle.Fill;
             this.mainPanel.Controls.Add(BalanceUC);
@@ -57,6 +48,7 @@ namespace BudgetTrekker
 
 
             AccountsUS = new AccountsUS();
+            this.AccountsUS.DBInit();
             AccountsUS.Dock = DockStyle.Fill;
             this.mainPanel.Controls.Add(AccountsUS);
 
@@ -84,10 +76,27 @@ namespace BudgetTrekker
             SettingsUC = new SettingsUC();
             SettingsUC.Dock = DockStyle.Fill;
             this.mainPanel.Controls.Add(SettingsUC);
+
+
+            HomeUC = new HomeUC();
+            HomeUC.Dock = DockStyle.Fill;
+            this.mainPanel.Controls.Add(HomeUC);
+
+            HomeBtn_Click(null, null);
         }
 
         private void HomeBtn_Click(object sender, EventArgs e)
         {
+            this.BudgetsUC.DBInit();
+            this.BalanceUC.DBInit();
+            this.AccountsUS.DBInit();
+            this.IncomeUC.DBInit();
+            this.SpendingUC.DBInit();
+
+            this.HomeUC.IncomeData(this.IncomeUC);
+            this.HomeUC.SpendingData(this.SpendingUC);
+
+            this.HomeUC.DBInit();
             this.HomeUC.BringToFront();
             dragControl1.SelectControl = HomeUC.mainPanel;
 
@@ -96,6 +105,7 @@ namespace BudgetTrekker
 
         private void Balance_btn_Click(object sender, EventArgs e)
         {
+            this.BalanceUC.DBInit();
             this.BalanceUC.BringToFront();
             dragControl1.SelectControl = BalanceUC.mainPanel;
 
@@ -104,6 +114,7 @@ namespace BudgetTrekker
 
         private void Income_btn_Click(object sender, EventArgs e)
         {
+            this.IncomeUC.DBInit();
             this.IncomeUC.BringToFront();
             dragControl1.SelectControl = IncomeUC.mainPanel;
 
@@ -112,6 +123,7 @@ namespace BudgetTrekker
 
         private void Spending_btn_Click(object sender, EventArgs e)
         {
+            this.SpendingUC.DBInit();
             this.SpendingUC.BringToFront();
             dragControl1.SelectControl = SpendingUC.mainPanel;
 

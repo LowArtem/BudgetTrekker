@@ -157,8 +157,12 @@
     <Compile Include="Models\AccountData.cs" />
     <Compile Include="Models\BudgetData.cs" />
     <Compile Include="Models\CalendarData.cs" />
+    <Compile Include="Models\ChangeDBData.cs" />
+    <Compile Include="Models\DateTimeExtensions.cs" />
     <Compile Include="Models\DbWorkers\Data.cs" />
     <Compile Include="Models\DbWorkers\DbManager.cs" />
+    <Compile Include="Models\DeleteDBData.cs" />
+    <Compile Include="Models\GetDBData.cs" />
     <Compile Include="Models\IncomeData.cs" />
     <Compile Include="Models\IncomeCategories.cs" />
     <Compile Include="Models\TransactionManager.cs" />
@@ -359,6 +363,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <None Include="Properties\invisible.png" />
+    <None Include="Properties\visible.png" />
     <Content Include="с# значок.ico" />
     <None Include="Properties\transport.png" />
     <None Include="Properties\personal.png" />

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BudgetTrekker.Models
 {
-    // TODO: подумать, какие именно настройки и как добаить в БД
+    // TODO: подумать, какие именно настройки и как добаить в БД, да и нужны ли они вообще
     class Settings
     {
         public int ID { get; set; }

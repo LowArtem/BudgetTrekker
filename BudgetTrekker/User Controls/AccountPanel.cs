@@ -16,6 +16,10 @@ namespace BudgetTrekker.User_Controls
     {        
         public virtual AccountData Account { get; set; }
 
+        public string accountTime = "0";
+        public string accountName = "0";
+        public string accountSum = "0";
+
         private List<AccountData> accountDatas;
         private List<ReportData> reportDatas;
         private List<IncomeData> incomeDatas;
@@ -25,7 +29,6 @@ namespace BudgetTrekker.User_Controls
         private TextBox accountSumTB;
         private TextBox cardNumberTB;
         private Label cardNumberLbl;
-
 
         public AccountPanel(AccountData account)
         {
@@ -113,6 +116,17 @@ namespace BudgetTrekker.User_Controls
             accountSumLbl.Text = this.Account.CashSum.ToString("n", new System.Globalization.CultureInfo("ru-RU")) + " руб";
 
             var reportsForAccountList = this.reportDatas.Where(p => p.Account.ID == this.Account.ID).ToList();
+
+            try
+            {
+                this.accountTime = reportsForAccountList[0].Time.ToShortDateString();
+                this.accountSum = accountSumLbl.Text;
+                this.accountName = accountNameLbl.Text;
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+
+            }
 
             if (reportsForAccountList.Count > 0)
             {

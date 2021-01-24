@@ -19,13 +19,5 @@ namespace BudgetTrekker.Models
             this.IsComplete = isComplete;
         }
         public TaskData() { }
-
-
-        //internal List<TaskData> ToList()
-        //{
-        //    var list = new List<TaskData>();
-        //    list.Add(this);
-        //    return list;
-        //}
     }
 }

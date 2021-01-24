@@ -193,21 +193,21 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(484, 13);
+            this.label9.Location = new System.Drawing.Point(496, 13);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(102, 25);
+            this.label9.Size = new System.Drawing.Size(79, 25);
             this.label9.TabIndex = 13;
-            this.label9.Text = "Сегодня";
+            this.label9.Text = "Вчера";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(341, 13);
+            this.label8.Location = new System.Drawing.Point(337, 13);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(79, 25);
+            this.label8.Size = new System.Drawing.Size(102, 25);
             this.label8.TabIndex = 12;
-            this.label8.Text = "Вчера";
+            this.label8.Text = "Сегодня";
             // 
             // line17
             // 
@@ -268,7 +268,7 @@
             // 
             this.amount10.AutoSize = true;
             this.amount10.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount10.Location = new System.Drawing.Point(979, 28);
+            this.amount10.Location = new System.Drawing.Point(932, 28);
             this.amount10.Name = "amount10";
             this.amount10.Size = new System.Drawing.Size(21, 22);
             this.amount10.TabIndex = 13;
@@ -278,7 +278,7 @@
             // 
             this.amount9.AutoSize = true;
             this.amount9.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount9.Location = new System.Drawing.Point(820, 28);
+            this.amount9.Location = new System.Drawing.Point(770, 28);
             this.amount9.Name = "amount9";
             this.amount9.Size = new System.Drawing.Size(21, 22);
             this.amount9.TabIndex = 12;
@@ -288,7 +288,7 @@
             // 
             this.amount8.AutoSize = true;
             this.amount8.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount8.Location = new System.Drawing.Point(666, 28);
+            this.amount8.Location = new System.Drawing.Point(612, 28);
             this.amount8.Name = "amount8";
             this.amount8.Size = new System.Drawing.Size(21, 22);
             this.amount8.TabIndex = 11;
@@ -298,7 +298,7 @@
             // 
             this.amount7.AutoSize = true;
             this.amount7.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount7.Location = new System.Drawing.Point(511, 28);
+            this.amount7.Location = new System.Drawing.Point(454, 28);
             this.amount7.Name = "amount7";
             this.amount7.Size = new System.Drawing.Size(21, 22);
             this.amount7.TabIndex = 10;
@@ -308,7 +308,7 @@
             // 
             this.amount6.AutoSize = true;
             this.amount6.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount6.Location = new System.Drawing.Point(328, 28);
+            this.amount6.Location = new System.Drawing.Point(302, 28);
             this.amount6.Name = "amount6";
             this.amount6.Size = new System.Drawing.Size(21, 22);
             this.amount6.TabIndex = 9;
@@ -412,7 +412,7 @@
             // 
             this.amount15.AutoSize = true;
             this.amount15.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount15.Location = new System.Drawing.Point(979, 26);
+            this.amount15.Location = new System.Drawing.Point(932, 26);
             this.amount15.Name = "amount15";
             this.amount15.Size = new System.Drawing.Size(21, 22);
             this.amount15.TabIndex = 13;
@@ -422,7 +422,7 @@
             // 
             this.amount14.AutoSize = true;
             this.amount14.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount14.Location = new System.Drawing.Point(820, 26);
+            this.amount14.Location = new System.Drawing.Point(770, 26);
             this.amount14.Name = "amount14";
             this.amount14.Size = new System.Drawing.Size(21, 22);
             this.amount14.TabIndex = 12;
@@ -432,7 +432,7 @@
             // 
             this.amount13.AutoSize = true;
             this.amount13.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount13.Location = new System.Drawing.Point(666, 26);
+            this.amount13.Location = new System.Drawing.Point(612, 26);
             this.amount13.Name = "amount13";
             this.amount13.Size = new System.Drawing.Size(21, 22);
             this.amount13.TabIndex = 11;
@@ -442,7 +442,7 @@
             // 
             this.amount12.AutoSize = true;
             this.amount12.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount12.Location = new System.Drawing.Point(511, 26);
+            this.amount12.Location = new System.Drawing.Point(454, 26);
             this.amount12.Name = "amount12";
             this.amount12.Size = new System.Drawing.Size(21, 22);
             this.amount12.TabIndex = 10;
@@ -452,7 +452,7 @@
             // 
             this.amount11.AutoSize = true;
             this.amount11.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount11.Location = new System.Drawing.Point(328, 26);
+            this.amount11.Location = new System.Drawing.Point(302, 26);
             this.amount11.Name = "amount11";
             this.amount11.Size = new System.Drawing.Size(21, 22);
             this.amount11.TabIndex = 9;
@@ -520,7 +520,7 @@
             // 
             this.amount20.AutoSize = true;
             this.amount20.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount20.Location = new System.Drawing.Point(979, 26);
+            this.amount20.Location = new System.Drawing.Point(932, 26);
             this.amount20.Name = "amount20";
             this.amount20.Size = new System.Drawing.Size(21, 22);
             this.amount20.TabIndex = 17;
@@ -530,7 +530,7 @@
             // 
             this.amount19.AutoSize = true;
             this.amount19.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount19.Location = new System.Drawing.Point(820, 26);
+            this.amount19.Location = new System.Drawing.Point(770, 26);
             this.amount19.Name = "amount19";
             this.amount19.Size = new System.Drawing.Size(21, 22);
             this.amount19.TabIndex = 16;
@@ -540,7 +540,7 @@
             // 
             this.amount18.AutoSize = true;
             this.amount18.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount18.Location = new System.Drawing.Point(666, 26);
+            this.amount18.Location = new System.Drawing.Point(612, 26);
             this.amount18.Name = "amount18";
             this.amount18.Size = new System.Drawing.Size(21, 22);
             this.amount18.TabIndex = 15;
@@ -550,7 +550,7 @@
             // 
             this.amount17.AutoSize = true;
             this.amount17.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount17.Location = new System.Drawing.Point(511, 26);
+            this.amount17.Location = new System.Drawing.Point(454, 26);
             this.amount17.Name = "amount17";
             this.amount17.Size = new System.Drawing.Size(21, 22);
             this.amount17.TabIndex = 14;
@@ -560,7 +560,7 @@
             // 
             this.amount16.AutoSize = true;
             this.amount16.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount16.Location = new System.Drawing.Point(328, 26);
+            this.amount16.Location = new System.Drawing.Point(302, 26);
             this.amount16.Name = "amount16";
             this.amount16.Size = new System.Drawing.Size(21, 22);
             this.amount16.TabIndex = 13;
@@ -660,7 +660,7 @@
             // 
             this.amount25.AutoSize = true;
             this.amount25.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount25.Location = new System.Drawing.Point(979, 29);
+            this.amount25.Location = new System.Drawing.Point(932, 29);
             this.amount25.Name = "amount25";
             this.amount25.Size = new System.Drawing.Size(21, 22);
             this.amount25.TabIndex = 17;
@@ -670,7 +670,7 @@
             // 
             this.amount24.AutoSize = true;
             this.amount24.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount24.Location = new System.Drawing.Point(820, 29);
+            this.amount24.Location = new System.Drawing.Point(770, 29);
             this.amount24.Name = "amount24";
             this.amount24.Size = new System.Drawing.Size(21, 22);
             this.amount24.TabIndex = 16;
@@ -680,7 +680,7 @@
             // 
             this.amount23.AutoSize = true;
             this.amount23.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount23.Location = new System.Drawing.Point(666, 29);
+            this.amount23.Location = new System.Drawing.Point(612, 29);
             this.amount23.Name = "amount23";
             this.amount23.Size = new System.Drawing.Size(21, 22);
             this.amount23.TabIndex = 15;
@@ -690,7 +690,7 @@
             // 
             this.amount22.AutoSize = true;
             this.amount22.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount22.Location = new System.Drawing.Point(511, 29);
+            this.amount22.Location = new System.Drawing.Point(454, 29);
             this.amount22.Name = "amount22";
             this.amount22.Size = new System.Drawing.Size(21, 22);
             this.amount22.TabIndex = 14;
@@ -700,7 +700,7 @@
             // 
             this.amount21.AutoSize = true;
             this.amount21.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount21.Location = new System.Drawing.Point(328, 29);
+            this.amount21.Location = new System.Drawing.Point(302, 29);
             this.amount21.Name = "amount21";
             this.amount21.Size = new System.Drawing.Size(21, 22);
             this.amount21.TabIndex = 13;
@@ -800,7 +800,7 @@
             // 
             this.amount5.AutoSize = true;
             this.amount5.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount5.Location = new System.Drawing.Point(979, 28);
+            this.amount5.Location = new System.Drawing.Point(932, 28);
             this.amount5.Name = "amount5";
             this.amount5.Size = new System.Drawing.Size(21, 22);
             this.amount5.TabIndex = 12;
@@ -810,7 +810,7 @@
             // 
             this.amount4.AutoSize = true;
             this.amount4.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount4.Location = new System.Drawing.Point(820, 28);
+            this.amount4.Location = new System.Drawing.Point(770, 28);
             this.amount4.Name = "amount4";
             this.amount4.Size = new System.Drawing.Size(21, 22);
             this.amount4.TabIndex = 11;
@@ -820,7 +820,7 @@
             // 
             this.amount3.AutoSize = true;
             this.amount3.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount3.Location = new System.Drawing.Point(666, 28);
+            this.amount3.Location = new System.Drawing.Point(612, 28);
             this.amount3.Name = "amount3";
             this.amount3.Size = new System.Drawing.Size(21, 22);
             this.amount3.TabIndex = 10;
@@ -830,7 +830,7 @@
             // 
             this.amount2.AutoSize = true;
             this.amount2.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount2.Location = new System.Drawing.Point(511, 28);
+            this.amount2.Location = new System.Drawing.Point(454, 28);
             this.amount2.Name = "amount2";
             this.amount2.Size = new System.Drawing.Size(21, 22);
             this.amount2.TabIndex = 9;
@@ -840,7 +840,7 @@
             // 
             this.amount1.AutoSize = true;
             this.amount1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount1.Location = new System.Drawing.Point(328, 28);
+            this.amount1.Location = new System.Drawing.Point(302, 28);
             this.amount1.Name = "amount1";
             this.amount1.Size = new System.Drawing.Size(21, 22);
             this.amount1.TabIndex = 8;
@@ -1046,30 +1046,30 @@
         private System.Windows.Forms.Label account_name4;
         private System.Windows.Forms.Label account_name5;
         private System.Windows.Forms.Label account_name1;
-        private System.Windows.Forms.Label amount1;
-        private System.Windows.Forms.Label amount10;
-        private System.Windows.Forms.Label amount9;
-        private System.Windows.Forms.Label amount8;
-        private System.Windows.Forms.Label amount7;
-        private System.Windows.Forms.Label amount6;
-        private System.Windows.Forms.Label amount15;
-        private System.Windows.Forms.Label amount14;
-        private System.Windows.Forms.Label amount13;
-        private System.Windows.Forms.Label amount12;
-        private System.Windows.Forms.Label amount11;
-        private System.Windows.Forms.Label amount20;
-        private System.Windows.Forms.Label amount19;
-        private System.Windows.Forms.Label amount18;
-        private System.Windows.Forms.Label amount17;
-        private System.Windows.Forms.Label amount16;
-        private System.Windows.Forms.Label amount25;
-        private System.Windows.Forms.Label amount24;
-        private System.Windows.Forms.Label amount23;
-        private System.Windows.Forms.Label amount22;
-        private System.Windows.Forms.Label amount21;
-        private System.Windows.Forms.Label amount5;
-        private System.Windows.Forms.Label amount4;
-        private System.Windows.Forms.Label amount3;
-        private System.Windows.Forms.Label amount2;
+        public System.Windows.Forms.Label amount1;
+        public System.Windows.Forms.Label amount10;
+        public System.Windows.Forms.Label amount9;
+        public System.Windows.Forms.Label amount8;
+        public System.Windows.Forms.Label amount7;
+        public System.Windows.Forms.Label amount6;
+        public System.Windows.Forms.Label amount15;
+        public System.Windows.Forms.Label amount14;
+        public System.Windows.Forms.Label amount13;
+        public System.Windows.Forms.Label amount12;
+        public System.Windows.Forms.Label amount11;
+        public System.Windows.Forms.Label amount20;
+        public System.Windows.Forms.Label amount19;
+        public System.Windows.Forms.Label amount18;
+        public System.Windows.Forms.Label amount17;
+        public System.Windows.Forms.Label amount16;
+        public System.Windows.Forms.Label amount25;
+        public System.Windows.Forms.Label amount24;
+        public System.Windows.Forms.Label amount23;
+        public System.Windows.Forms.Label amount22;
+        public System.Windows.Forms.Label amount21;
+        public System.Windows.Forms.Label amount5;
+        public System.Windows.Forms.Label amount4;
+        public System.Windows.Forms.Label amount3;
+        public System.Windows.Forms.Label amount2;
     }
 }

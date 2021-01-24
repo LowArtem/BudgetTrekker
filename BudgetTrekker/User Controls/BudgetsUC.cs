@@ -14,6 +14,12 @@ namespace BudgetTrekker.User_Controls
 {
     public partial class BudgetsUC : UserControl
     {
+        public static List<string> budgetsName = new List<string>();
+        public static List<string> budgetsCurrentSum = new List<string>();
+        public static List<string> budgetsSum = new List<string>();
+        public static List<int> budgetsProcent = new List<int>();
+
+
         private bool isTB1 = false;
         private bool isTB2 = false;
         private bool isTB3 = false;
@@ -270,6 +276,11 @@ namespace BudgetTrekker.User_Controls
 
         public void DBInit()
         {
+            budgetsName.Clear();
+            budgetsCurrentSum.Clear();
+            budgetsSum.Clear();
+            budgetsProcent.Clear();
+
             using (DbManager db = new DbManager())
             {
                 var data = db.Budgets.ToList();
@@ -279,6 +290,11 @@ namespace BudgetTrekker.User_Controls
                     foreach (var data_element in data)
                     {
                         PrintBudgetsDataManager(data_element);
+
+                        budgetsName.Add(data_element.Name);
+                        budgetsCurrentSum.Add(data_element.CurrentSum.ToString());
+                        budgetsSum.Add(data_element.MaxSum.ToString());
+                        budgetsProcent.Add(data_element.GetPercentCurrentToMax());
                     }
                 }
                 else
@@ -296,8 +312,14 @@ namespace BudgetTrekker.User_Controls
                     foreach (var data_element in data1)
                     {
                         PrintBudgetsDataManager(data_element);
+
+                        budgetsName.Add(data_element.Name);
+                        budgetsCurrentSum.Add(data_element.CurrentSum.ToString());
+                        budgetsSum.Add(data_element.MaxSum.ToString());
+                        budgetsProcent.Add(data_element.GetPercentCurrentToMax());
                     }
                 }
+
             }
         }
     }

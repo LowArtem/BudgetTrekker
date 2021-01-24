@@ -14,6 +14,10 @@ namespace BudgetTrekker.User_Controls
 {
     public  partial class AccountsUS : UserControl
     {
+        public static List<string> accountsName = new List<string>();
+        public static List<string> accountsSum = new List<string>();
+        public static List<string> accountsTime = new List<string>();
+
         private List<ReportData> reportDatas;
         private List<AccountData> accountDatas;
         private List<IncomeData> incomeDatas;
@@ -100,6 +104,10 @@ namespace BudgetTrekker.User_Controls
 
         public void DBInit()
         {
+            accountsName.Clear();
+            accountsSum.Clear();
+            accountsTime.Clear();
+
             using (DbManager db = new DbManager())
             {
                 this.accountDatas = db.Accounts.ToList();
@@ -112,7 +120,11 @@ namespace BudgetTrekker.User_Controls
             foreach (var panel in accountPanels)
             {
                 ((AccountPanel)panel).DBInit();
-            }
+
+                accountsName.Add(((AccountPanel)panel).accountName);
+                accountsSum.Add(((AccountPanel)panel).accountSum);
+                accountsTime.Add(((AccountPanel)panel).accountTime);
+            }            
         }
     }
 }

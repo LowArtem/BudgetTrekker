@@ -43,6 +43,7 @@
             this.line32 = new System.Windows.Forms.Panel();
             this.line31 = new System.Windows.Forms.Panel();
             this.label26 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.amount30 = new System.Windows.Forms.Label();
             this.amount29 = new System.Windows.Forms.Label();
@@ -56,6 +57,7 @@
             this.line27 = new System.Windows.Forms.Panel();
             this.line26 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -75,6 +77,7 @@
             this.line10 = new System.Windows.Forms.Panel();
             this.line2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.amount15 = new System.Windows.Forms.Label();
             this.amount14 = new System.Windows.Forms.Label();
@@ -86,6 +89,7 @@
             this.line3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.line16 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.line15 = new System.Windows.Forms.Panel();
             this.line14 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -101,6 +105,7 @@
             this.line18 = new System.Windows.Forms.Panel();
             this.line4 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.amount25 = new System.Windows.Forms.Label();
             this.amount24 = new System.Windows.Forms.Label();
@@ -114,6 +119,7 @@
             this.line22 = new System.Windows.Forms.Panel();
             this.line5 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.amount5 = new System.Windows.Forms.Label();
             this.amount4 = new System.Windows.Forms.Label();
@@ -127,31 +133,25 @@
             this.line6 = new System.Windows.Forms.Panel();
             this.line1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.minimize_btn = new System.Windows.Forms.Button();
             this.exit_btn = new System.Windows.Forms.Button();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mainPanel.SuspendLayout();
             this.infoPanel.SuspendLayout();
             this.panel12.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -214,7 +214,7 @@
             // 
             this.amount35.AutoSize = true;
             this.amount35.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount35.Location = new System.Drawing.Point(979, 29);
+            this.amount35.Location = new System.Drawing.Point(932, 29);
             this.amount35.Name = "amount35";
             this.amount35.Size = new System.Drawing.Size(21, 22);
             this.amount35.TabIndex = 17;
@@ -224,7 +224,7 @@
             // 
             this.amount34.AutoSize = true;
             this.amount34.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount34.Location = new System.Drawing.Point(820, 29);
+            this.amount34.Location = new System.Drawing.Point(770, 29);
             this.amount34.Name = "amount34";
             this.amount34.Size = new System.Drawing.Size(21, 22);
             this.amount34.TabIndex = 16;
@@ -234,7 +234,7 @@
             // 
             this.amount33.AutoSize = true;
             this.amount33.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount33.Location = new System.Drawing.Point(666, 29);
+            this.amount33.Location = new System.Drawing.Point(612, 29);
             this.amount33.Name = "amount33";
             this.amount33.Size = new System.Drawing.Size(21, 22);
             this.amount33.TabIndex = 15;
@@ -244,7 +244,7 @@
             // 
             this.amount32.AutoSize = true;
             this.amount32.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount32.Location = new System.Drawing.Point(511, 29);
+            this.amount32.Location = new System.Drawing.Point(454, 29);
             this.amount32.Name = "amount32";
             this.amount32.Size = new System.Drawing.Size(21, 22);
             this.amount32.TabIndex = 14;
@@ -254,7 +254,7 @@
             // 
             this.amount31.AutoSize = true;
             this.amount31.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount31.Location = new System.Drawing.Point(328, 29);
+            this.amount31.Location = new System.Drawing.Point(302, 29);
             this.amount31.Name = "amount31";
             this.amount31.Size = new System.Drawing.Size(21, 22);
             this.amount31.TabIndex = 13;
@@ -319,6 +319,16 @@
             this.label26.TabIndex = 2;
             this.label26.Text = "Другое";
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackgroundImage = global::BudgetTrekker.Properties.Resources.other;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox7.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(72, 71);
+            this.pictureBox7.TabIndex = 1;
+            this.pictureBox7.TabStop = false;
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
@@ -344,7 +354,7 @@
             // 
             this.amount30.AutoSize = true;
             this.amount30.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount30.Location = new System.Drawing.Point(979, 29);
+            this.amount30.Location = new System.Drawing.Point(932, 29);
             this.amount30.Name = "amount30";
             this.amount30.Size = new System.Drawing.Size(21, 22);
             this.amount30.TabIndex = 17;
@@ -354,7 +364,7 @@
             // 
             this.amount29.AutoSize = true;
             this.amount29.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount29.Location = new System.Drawing.Point(820, 29);
+            this.amount29.Location = new System.Drawing.Point(770, 29);
             this.amount29.Name = "amount29";
             this.amount29.Size = new System.Drawing.Size(21, 22);
             this.amount29.TabIndex = 16;
@@ -364,7 +374,7 @@
             // 
             this.amount28.AutoSize = true;
             this.amount28.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount28.Location = new System.Drawing.Point(666, 29);
+            this.amount28.Location = new System.Drawing.Point(612, 29);
             this.amount28.Name = "amount28";
             this.amount28.Size = new System.Drawing.Size(21, 22);
             this.amount28.TabIndex = 15;
@@ -374,7 +384,7 @@
             // 
             this.amount27.AutoSize = true;
             this.amount27.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount27.Location = new System.Drawing.Point(511, 29);
+            this.amount27.Location = new System.Drawing.Point(454, 29);
             this.amount27.Name = "amount27";
             this.amount27.Size = new System.Drawing.Size(21, 22);
             this.amount27.TabIndex = 14;
@@ -384,7 +394,7 @@
             // 
             this.amount26.AutoSize = true;
             this.amount26.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount26.Location = new System.Drawing.Point(328, 29);
+            this.amount26.Location = new System.Drawing.Point(302, 29);
             this.amount26.Name = "amount26";
             this.amount26.Size = new System.Drawing.Size(21, 22);
             this.amount26.TabIndex = 13;
@@ -449,6 +459,16 @@
             this.label19.TabIndex = 2;
             this.label19.Text = "Транспорт";
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImage = global::BudgetTrekker.Properties.Resources.transport;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox6.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(72, 71);
+            this.pictureBox6.TabIndex = 1;
+            this.pictureBox6.TabStop = false;
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -483,21 +503,21 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(484, 13);
+            this.label9.Location = new System.Drawing.Point(492, 13);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(102, 25);
+            this.label9.Size = new System.Drawing.Size(79, 25);
             this.label9.TabIndex = 13;
-            this.label9.Text = "Сегодня";
+            this.label9.Text = "Вчера";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(341, 13);
+            this.label8.Location = new System.Drawing.Point(335, 13);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(79, 25);
+            this.label8.Size = new System.Drawing.Size(102, 25);
             this.label8.TabIndex = 12;
-            this.label8.Text = "Вчера";
+            this.label8.Text = "Сегодня";
             // 
             // label2
             // 
@@ -534,7 +554,7 @@
             // 
             this.amount10.AutoSize = true;
             this.amount10.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount10.Location = new System.Drawing.Point(979, 28);
+            this.amount10.Location = new System.Drawing.Point(932, 28);
             this.amount10.Name = "amount10";
             this.amount10.Size = new System.Drawing.Size(21, 22);
             this.amount10.TabIndex = 13;
@@ -544,7 +564,7 @@
             // 
             this.amount9.AutoSize = true;
             this.amount9.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount9.Location = new System.Drawing.Point(820, 28);
+            this.amount9.Location = new System.Drawing.Point(770, 28);
             this.amount9.Name = "amount9";
             this.amount9.Size = new System.Drawing.Size(21, 22);
             this.amount9.TabIndex = 12;
@@ -554,7 +574,7 @@
             // 
             this.amount8.AutoSize = true;
             this.amount8.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount8.Location = new System.Drawing.Point(666, 28);
+            this.amount8.Location = new System.Drawing.Point(612, 28);
             this.amount8.Name = "amount8";
             this.amount8.Size = new System.Drawing.Size(21, 22);
             this.amount8.TabIndex = 11;
@@ -564,7 +584,7 @@
             // 
             this.amount7.AutoSize = true;
             this.amount7.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount7.Location = new System.Drawing.Point(511, 28);
+            this.amount7.Location = new System.Drawing.Point(454, 28);
             this.amount7.Name = "amount7";
             this.amount7.Size = new System.Drawing.Size(21, 22);
             this.amount7.TabIndex = 10;
@@ -574,7 +594,7 @@
             // 
             this.amount6.AutoSize = true;
             this.amount6.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount6.Location = new System.Drawing.Point(328, 28);
+            this.amount6.Location = new System.Drawing.Point(302, 28);
             this.amount6.Name = "amount6";
             this.amount6.Size = new System.Drawing.Size(21, 22);
             this.amount6.TabIndex = 9;
@@ -639,6 +659,16 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "ЖК услуги";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::BudgetTrekker.Properties.Resources.home_services;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(72, 71);
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
@@ -664,7 +694,7 @@
             // 
             this.amount15.AutoSize = true;
             this.amount15.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount15.Location = new System.Drawing.Point(979, 26);
+            this.amount15.Location = new System.Drawing.Point(932, 26);
             this.amount15.Name = "amount15";
             this.amount15.Size = new System.Drawing.Size(21, 22);
             this.amount15.TabIndex = 13;
@@ -674,7 +704,7 @@
             // 
             this.amount14.AutoSize = true;
             this.amount14.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount14.Location = new System.Drawing.Point(820, 26);
+            this.amount14.Location = new System.Drawing.Point(770, 26);
             this.amount14.Name = "amount14";
             this.amount14.Size = new System.Drawing.Size(21, 22);
             this.amount14.TabIndex = 12;
@@ -684,7 +714,7 @@
             // 
             this.amount13.AutoSize = true;
             this.amount13.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount13.Location = new System.Drawing.Point(666, 26);
+            this.amount13.Location = new System.Drawing.Point(612, 26);
             this.amount13.Name = "amount13";
             this.amount13.Size = new System.Drawing.Size(21, 22);
             this.amount13.TabIndex = 11;
@@ -694,7 +724,7 @@
             // 
             this.amount12.AutoSize = true;
             this.amount12.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount12.Location = new System.Drawing.Point(511, 26);
+            this.amount12.Location = new System.Drawing.Point(454, 26);
             this.amount12.Name = "amount12";
             this.amount12.Size = new System.Drawing.Size(21, 22);
             this.amount12.TabIndex = 10;
@@ -704,7 +734,7 @@
             // 
             this.amount11.AutoSize = true;
             this.amount11.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount11.Location = new System.Drawing.Point(328, 26);
+            this.amount11.Location = new System.Drawing.Point(302, 26);
             this.amount11.Name = "amount11";
             this.amount11.Size = new System.Drawing.Size(21, 22);
             this.amount11.TabIndex = 9;
@@ -753,6 +783,16 @@
             this.line16.Size = new System.Drawing.Size(2, 77);
             this.line16.TabIndex = 10;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::BudgetTrekker.Properties.Resources.food;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(72, 71);
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
             // line15
             // 
             this.line15.BackColor = System.Drawing.Color.Black;
@@ -794,7 +834,7 @@
             // 
             this.amount20.AutoSize = true;
             this.amount20.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount20.Location = new System.Drawing.Point(979, 26);
+            this.amount20.Location = new System.Drawing.Point(932, 26);
             this.amount20.Name = "amount20";
             this.amount20.Size = new System.Drawing.Size(21, 22);
             this.amount20.TabIndex = 17;
@@ -804,7 +844,7 @@
             // 
             this.amount19.AutoSize = true;
             this.amount19.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount19.Location = new System.Drawing.Point(820, 26);
+            this.amount19.Location = new System.Drawing.Point(770, 26);
             this.amount19.Name = "amount19";
             this.amount19.Size = new System.Drawing.Size(21, 22);
             this.amount19.TabIndex = 16;
@@ -814,7 +854,7 @@
             // 
             this.amount18.AutoSize = true;
             this.amount18.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount18.Location = new System.Drawing.Point(666, 26);
+            this.amount18.Location = new System.Drawing.Point(612, 26);
             this.amount18.Name = "amount18";
             this.amount18.Size = new System.Drawing.Size(21, 22);
             this.amount18.TabIndex = 15;
@@ -824,7 +864,7 @@
             // 
             this.amount17.AutoSize = true;
             this.amount17.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount17.Location = new System.Drawing.Point(511, 26);
+            this.amount17.Location = new System.Drawing.Point(454, 26);
             this.amount17.Name = "amount17";
             this.amount17.Size = new System.Drawing.Size(21, 22);
             this.amount17.TabIndex = 14;
@@ -834,7 +874,7 @@
             // 
             this.amount16.AutoSize = true;
             this.amount16.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount16.Location = new System.Drawing.Point(328, 26);
+            this.amount16.Location = new System.Drawing.Point(302, 26);
             this.amount16.Name = "amount16";
             this.amount16.Size = new System.Drawing.Size(21, 22);
             this.amount16.TabIndex = 13;
@@ -899,6 +939,16 @@
             this.label6.TabIndex = 2;
             this.label6.Text = "Личные";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::BudgetTrekker.Properties.Resources.personal;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox4.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(72, 71);
+            this.pictureBox4.TabIndex = 1;
+            this.pictureBox4.TabStop = false;
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
@@ -924,7 +974,7 @@
             // 
             this.amount25.AutoSize = true;
             this.amount25.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount25.Location = new System.Drawing.Point(979, 29);
+            this.amount25.Location = new System.Drawing.Point(932, 29);
             this.amount25.Name = "amount25";
             this.amount25.Size = new System.Drawing.Size(21, 22);
             this.amount25.TabIndex = 17;
@@ -934,7 +984,7 @@
             // 
             this.amount24.AutoSize = true;
             this.amount24.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount24.Location = new System.Drawing.Point(820, 29);
+            this.amount24.Location = new System.Drawing.Point(770, 29);
             this.amount24.Name = "amount24";
             this.amount24.Size = new System.Drawing.Size(21, 22);
             this.amount24.TabIndex = 16;
@@ -944,7 +994,7 @@
             // 
             this.amount23.AutoSize = true;
             this.amount23.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount23.Location = new System.Drawing.Point(666, 29);
+            this.amount23.Location = new System.Drawing.Point(612, 29);
             this.amount23.Name = "amount23";
             this.amount23.Size = new System.Drawing.Size(21, 22);
             this.amount23.TabIndex = 15;
@@ -954,7 +1004,7 @@
             // 
             this.amount22.AutoSize = true;
             this.amount22.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount22.Location = new System.Drawing.Point(511, 29);
+            this.amount22.Location = new System.Drawing.Point(454, 29);
             this.amount22.Name = "amount22";
             this.amount22.Size = new System.Drawing.Size(21, 22);
             this.amount22.TabIndex = 14;
@@ -964,7 +1014,7 @@
             // 
             this.amount21.AutoSize = true;
             this.amount21.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount21.Location = new System.Drawing.Point(328, 29);
+            this.amount21.Location = new System.Drawing.Point(302, 29);
             this.amount21.Name = "amount21";
             this.amount21.Size = new System.Drawing.Size(21, 22);
             this.amount21.TabIndex = 13;
@@ -1029,6 +1079,16 @@
             this.label7.TabIndex = 2;
             this.label7.Text = "Развлечения";
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = global::BudgetTrekker.Properties.Resources.entertainment;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox5.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(72, 71);
+            this.pictureBox5.TabIndex = 1;
+            this.pictureBox5.TabStop = false;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
@@ -1054,7 +1114,7 @@
             // 
             this.amount5.AutoSize = true;
             this.amount5.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount5.Location = new System.Drawing.Point(979, 28);
+            this.amount5.Location = new System.Drawing.Point(932, 28);
             this.amount5.Name = "amount5";
             this.amount5.Size = new System.Drawing.Size(21, 22);
             this.amount5.TabIndex = 12;
@@ -1064,7 +1124,7 @@
             // 
             this.amount4.AutoSize = true;
             this.amount4.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount4.Location = new System.Drawing.Point(820, 28);
+            this.amount4.Location = new System.Drawing.Point(770, 28);
             this.amount4.Name = "amount4";
             this.amount4.Size = new System.Drawing.Size(21, 22);
             this.amount4.TabIndex = 11;
@@ -1074,7 +1134,7 @@
             // 
             this.amount3.AutoSize = true;
             this.amount3.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount3.Location = new System.Drawing.Point(666, 28);
+            this.amount3.Location = new System.Drawing.Point(612, 28);
             this.amount3.Name = "amount3";
             this.amount3.Size = new System.Drawing.Size(21, 22);
             this.amount3.TabIndex = 10;
@@ -1084,7 +1144,7 @@
             // 
             this.amount2.AutoSize = true;
             this.amount2.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount2.Location = new System.Drawing.Point(511, 28);
+            this.amount2.Location = new System.Drawing.Point(454, 28);
             this.amount2.Name = "amount2";
             this.amount2.Size = new System.Drawing.Size(21, 22);
             this.amount2.TabIndex = 9;
@@ -1094,7 +1154,7 @@
             // 
             this.amount1.AutoSize = true;
             this.amount1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.amount1.Location = new System.Drawing.Point(328, 28);
+            this.amount1.Location = new System.Drawing.Point(302, 28);
             this.amount1.Name = "amount1";
             this.amount1.Size = new System.Drawing.Size(21, 22);
             this.amount1.TabIndex = 8;
@@ -1159,6 +1219,16 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Кредит";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::BudgetTrekker.Properties.Resources.credit;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(72, 71);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -1202,76 +1272,6 @@
             this.exit_btn.UseVisualStyleBackColor = false;
             this.exit_btn.Click += new System.EventHandler(this.Exit_btn_Click);
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackgroundImage = global::BudgetTrekker.Properties.Resources.other;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox7.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(72, 71);
-            this.pictureBox7.TabIndex = 1;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImage = global::BudgetTrekker.Properties.Resources.transport;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox6.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(72, 71);
-            this.pictureBox6.TabIndex = 1;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::BudgetTrekker.Properties.Resources.home_services;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(72, 71);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::BudgetTrekker.Properties.Resources.food;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(72, 71);
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = global::BudgetTrekker.Properties.Resources.personal;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(72, 71);
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImage = global::BudgetTrekker.Properties.Resources.entertainment;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(72, 71);
-            this.pictureBox5.TabIndex = 1;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::BudgetTrekker.Properties.Resources.credit;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(72, 71);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // SpendingUC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1286,24 +1286,24 @@
             this.infoPanel.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -1326,11 +1326,7 @@
         private System.Windows.Forms.Panel line16;
         private System.Windows.Forms.Panel line15;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label amount10;
-        private System.Windows.Forms.Label amount9;
-        private System.Windows.Forms.Label amount8;
         private System.Windows.Forms.Label amount7;
-        private System.Windows.Forms.Label amount6;
         private System.Windows.Forms.Label account_name2;
         private System.Windows.Forms.Panel line13;
         private System.Windows.Forms.Panel line12;
@@ -1341,21 +1337,13 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel line14;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label amount15;
-        private System.Windows.Forms.Label amount14;
-        private System.Windows.Forms.Label amount13;
         private System.Windows.Forms.Label amount12;
-        private System.Windows.Forms.Label amount11;
         private System.Windows.Forms.Label account_name3;
         private System.Windows.Forms.Panel line3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label amount20;
-        private System.Windows.Forms.Label amount19;
-        private System.Windows.Forms.Label amount18;
         private System.Windows.Forms.Label amount17;
-        private System.Windows.Forms.Label amount16;
         private System.Windows.Forms.Label account_name4;
         private System.Windows.Forms.Panel line21;
         private System.Windows.Forms.Panel line20;
@@ -1365,11 +1353,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label amount25;
-        private System.Windows.Forms.Label amount24;
-        private System.Windows.Forms.Label amount23;
         private System.Windows.Forms.Label amount22;
-        private System.Windows.Forms.Label amount21;
         private System.Windows.Forms.Label account_name5;
         private System.Windows.Forms.Panel line25;
         private System.Windows.Forms.Panel line24;
@@ -1379,11 +1363,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label amount5;
-        private System.Windows.Forms.Label amount4;
-        private System.Windows.Forms.Label amount3;
         private System.Windows.Forms.Label amount2;
-        private System.Windows.Forms.Label amount1;
         private System.Windows.Forms.Label account_name1;
         private System.Windows.Forms.Panel line9;
         private System.Windows.Forms.Panel line8;
@@ -1393,11 +1373,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label amount30;
-        private System.Windows.Forms.Label amount29;
-        private System.Windows.Forms.Label amount28;
         private System.Windows.Forms.Label amount27;
-        private System.Windows.Forms.Label amount26;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel line30;
         private System.Windows.Forms.Panel line29;
@@ -1407,11 +1383,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Label amount35;
-        private System.Windows.Forms.Label amount34;
-        private System.Windows.Forms.Label amount33;
         private System.Windows.Forms.Label amount32;
-        private System.Windows.Forms.Label amount31;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Panel line35;
         private System.Windows.Forms.Panel line34;
@@ -1420,5 +1392,33 @@
         private System.Windows.Forms.Panel line31;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.PictureBox pictureBox7;
+        public System.Windows.Forms.Label amount10;
+        public System.Windows.Forms.Label amount9;
+        public System.Windows.Forms.Label amount8;
+        public System.Windows.Forms.Label amount6;
+        public System.Windows.Forms.Label amount15;
+        public System.Windows.Forms.Label amount14;
+        public System.Windows.Forms.Label amount13;
+        public System.Windows.Forms.Label amount11;
+        public System.Windows.Forms.Label amount20;
+        public System.Windows.Forms.Label amount19;
+        public System.Windows.Forms.Label amount18;
+        public System.Windows.Forms.Label amount16;
+        public System.Windows.Forms.Label amount25;
+        public System.Windows.Forms.Label amount24;
+        public System.Windows.Forms.Label amount23;
+        public System.Windows.Forms.Label amount21;
+        public System.Windows.Forms.Label amount5;
+        public System.Windows.Forms.Label amount4;
+        public System.Windows.Forms.Label amount3;
+        public System.Windows.Forms.Label amount1;
+        public System.Windows.Forms.Label amount30;
+        public System.Windows.Forms.Label amount29;
+        public System.Windows.Forms.Label amount28;
+        public System.Windows.Forms.Label amount26;
+        public System.Windows.Forms.Label amount35;
+        public System.Windows.Forms.Label amount34;
+        public System.Windows.Forms.Label amount33;
+        public System.Windows.Forms.Label amount31;
     }
 }
