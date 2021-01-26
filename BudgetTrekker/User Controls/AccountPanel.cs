@@ -11,7 +11,6 @@ using BudgetTrekker.Models;
 
 namespace BudgetTrekker.User_Controls
 {
-    // TODO: закончить переносить сюда весь функционал из AccountUS
     public partial class AccountPanel : UserControl
     {        
         public virtual AccountData Account { get; set; }
@@ -38,6 +37,9 @@ namespace BudgetTrekker.User_Controls
             errorTransactionLbl.Visible = false;
             this.BackColor = Color.FromArgb(255, 224, 204);
             lastTransactionsPanel.BackColor = Color.FromArgb(252, 231, 217);
+
+            this.lastTransactionsPanel.AutoScroll = true;
+
             settingsBtn.BackColor = Color.FromArgb(218, 189, 171);
             settingsBtn.Text = "⋮";
             deleteBtnToolTip.SetToolTip(deleteBtn, "Удалить счет безвозвратно?");
@@ -128,16 +130,13 @@ namespace BudgetTrekker.User_Controls
 
             }
 
-            if (reportsForAccountList.Count > 0)
+            if (reportsForAccountList != null && reportsForAccountList.Count > 0)
             {
-                int yCoord = 0;
+                lastTransactionsPanel.RowStyles.Clear();
+
                 for (int i = 0; i < reportsForAccountList.Count; i++)
                 {
-                    MiniTransactionPanelController(yCoord, ref lastTransactionsPanel, reportsForAccountList[i]);
-                    yCoord += 100;
-
-                    if (i == 3)
-                        break;
+                    MiniTransactionPanelController(ref lastTransactionsPanel, reportsForAccountList[i]);
                 }
 
                 reportsForAccountList.Clear();
@@ -148,7 +147,7 @@ namespace BudgetTrekker.User_Controls
             }
         }
 
-        private void MiniTransactionPanelController(int yCoord, ref Panel lastTransactionsPanel, ReportData reportData)
+        private void MiniTransactionPanelController(ref TableLayoutPanel lastTransactionsPanel, ReportData reportData)
         {
             LastTransactionPanel lastTransactionPanel;
             if (reportData.IsIncome)
@@ -164,7 +163,6 @@ namespace BudgetTrekker.User_Controls
 
             lastTransactionPanel.BorderStyle = BorderStyle.FixedSingle;
             lastTransactionPanel.BackColor = lastTransactionsPanel.BackColor;
-            lastTransactionPanel.Location = new Point(0, yCoord);
             lastTransactionPanel.Size = new Size(250, 100);
 
             lastTransactionsPanel.Controls.Add(lastTransactionPanel);

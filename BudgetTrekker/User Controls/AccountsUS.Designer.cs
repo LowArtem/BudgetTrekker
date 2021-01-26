@@ -30,8 +30,8 @@
         {
             this.mainPanel = new System.Windows.Forms.Panel();
             this.addBtn = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.minimize_btn = new System.Windows.Forms.Button();
             this.exit_btn = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
@@ -64,6 +64,16 @@
             this.addBtn.UseVisualStyleBackColor = false;
             this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(477, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(134, 45);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Счета";
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.AutoScroll = true;
@@ -79,18 +89,8 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1083, 632);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1083, 640);
             this.tableLayoutPanel1.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(477, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 45);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Счета";
             // 
             // minimize_btn
             // 

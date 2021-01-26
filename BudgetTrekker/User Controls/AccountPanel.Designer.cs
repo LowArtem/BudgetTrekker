@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.accountNameLbl = new System.Windows.Forms.Label();
             this.accountSumLbl = new System.Windows.Forms.Label();
-            this.lastTransactionsPanel = new System.Windows.Forms.Panel();
-            this.errorTransactionLbl = new System.Windows.Forms.Label();
             this.settingsBtn = new System.Windows.Forms.Button();
             this.lastTransactionNameLbl = new System.Windows.Forms.Label();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.deleteBtnToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.lastTransactionsPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.errorTransactionLbl = new System.Windows.Forms.Label();
             this.lastTransactionsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,26 +61,6 @@
             this.accountSumLbl.Size = new System.Drawing.Size(73, 25);
             this.accountSumLbl.TabIndex = 1;
             this.accountSumLbl.Text = "0 руб";
-            // 
-            // lastTransactionsPanel
-            // 
-            this.lastTransactionsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(231)))), ((int)(((byte)(217)))));
-            this.lastTransactionsPanel.Controls.Add(this.errorTransactionLbl);
-            this.lastTransactionsPanel.Location = new System.Drawing.Point(25, 130);
-            this.lastTransactionsPanel.Name = "lastTransactionsPanel";
-            this.lastTransactionsPanel.Size = new System.Drawing.Size(250, 400);
-            this.lastTransactionsPanel.TabIndex = 2;
-            // 
-            // errorTransactionLbl
-            // 
-            this.errorTransactionLbl.AutoSize = true;
-            this.errorTransactionLbl.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.errorTransactionLbl.ForeColor = System.Drawing.Color.Red;
-            this.errorTransactionLbl.Location = new System.Drawing.Point(2, 65);
-            this.errorTransactionLbl.Name = "errorTransactionLbl";
-            this.errorTransactionLbl.Size = new System.Drawing.Size(244, 44);
-            this.errorTransactionLbl.TabIndex = 0;
-            this.errorTransactionLbl.Text = "Нет данных о последних \r\nтранзакциях";
             // 
             // settingsBtn
             // 
@@ -119,15 +99,46 @@
             this.deleteBtn.UseVisualStyleBackColor = false;
             this.deleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
+            // lastTransactionsPanel
+            // 
+            this.lastTransactionsPanel.AutoScroll = true;
+            this.lastTransactionsPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.lastTransactionsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(231)))), ((int)(((byte)(217)))));
+            this.lastTransactionsPanel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.lastTransactionsPanel.ColumnCount = 1;
+            this.lastTransactionsPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66F));
+            this.lastTransactionsPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34F));
+            this.lastTransactionsPanel.Controls.Add(this.errorTransactionLbl, 0, 0);
+            this.lastTransactionsPanel.Location = new System.Drawing.Point(12, 130);
+            this.lastTransactionsPanel.Name = "lastTransactionsPanel";
+            this.lastTransactionsPanel.RowCount = 2;
+            this.lastTransactionsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.lastTransactionsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.lastTransactionsPanel.Size = new System.Drawing.Size(276, 400);
+            this.lastTransactionsPanel.TabIndex = 1;
+            // 
+            // errorTransactionLbl
+            // 
+            this.errorTransactionLbl.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.errorTransactionLbl.AutoSize = true;
+            this.errorTransactionLbl.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.errorTransactionLbl.ForeColor = System.Drawing.Color.Red;
+            this.errorTransactionLbl.Location = new System.Drawing.Point(16, 155);
+            this.errorTransactionLbl.Name = "errorTransactionLbl";
+            this.errorTransactionLbl.Size = new System.Drawing.Size(244, 44);
+            this.errorTransactionLbl.TabIndex = 2;
+            this.errorTransactionLbl.Text = "Нет данных о последних \r\nтранзакциях";
+            this.errorTransactionLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // AccountPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(204)))));
+            this.Controls.Add(this.lastTransactionsPanel);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.lastTransactionNameLbl);
             this.Controls.Add(this.settingsBtn);
-            this.Controls.Add(this.lastTransactionsPanel);
             this.Controls.Add(this.accountSumLbl);
             this.Controls.Add(this.accountNameLbl);
             this.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -145,11 +156,11 @@
 
         private System.Windows.Forms.Label accountNameLbl;
         private System.Windows.Forms.Label accountSumLbl;
-        private System.Windows.Forms.Panel lastTransactionsPanel;
         private System.Windows.Forms.Button settingsBtn;
         private System.Windows.Forms.Label lastTransactionNameLbl;
-        private System.Windows.Forms.Label errorTransactionLbl;
         private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.ToolTip deleteBtnToolTip;
+        private System.Windows.Forms.TableLayoutPanel lastTransactionsPanel;
+        private System.Windows.Forms.Label errorTransactionLbl;
     }
 }
